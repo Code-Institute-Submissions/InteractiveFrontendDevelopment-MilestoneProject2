@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DailyNotes</title>
+
+    <script src="assets/js/jquery.js" crossorigin="anonymous"></script>
+
+    <script src="assets/js/popper.min.js"> </script>
+
+    <link rel="stylesheet" href="assets/bootstrap-4.0.0-dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="assets/bootstrap-4.0.0-dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <link href="assets/summernote-0.8.16-dist/summernote-bs4.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="assets/summernote-0.8.16-dist/summernote-bs4.min.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+
+</head>
+
+<body>
+    <!-- <h1>DailyNotes</h1> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">DailyNotes</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li> -->
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="my-container">
+        <div class="row py-3">
+
+
+
+            <div class="col-4" id="sticky-sidebar">
+                <div class="sticky-top">
+                    <!-- sidebar -->
+                    <div>
+
+                        <!-- <file-bag>
+                            testing
+                        </file-bag> -->
+
+                        <div class="calendar-month">
+                            <div id="1" class="cal-day">Mon</div>
+                            <div id="2" class="cal-day">Tue</div>
+                            <div id="3" class="cal-day">Wed</div>
+                            <div id="4" class="cal-day">Thu</div>
+                            <div id="5" class="cal-day">Fri</div>
+                            <div id="6" class="cal-day">Sat</div>
+                            <div id="7" class="cal-day">Sun</div>
+                            <div id="8">30</div>
+                            <div id="9">31</div>
+                            <div id="10">1</div>
+                            <div id="11">2</div>
+                            <div id="12">3</div>
+                            <div id="13">4</div>
+                            <div id="14">5</div>
+                            <div id="15">6</div>
+                            <div id="16">7</div>
+                            <div id="17">8</div>
+                            <div id="18">9</div>
+                            <div id="19">10</div>
+                            <div id="20"></div>
+                            <div id="21"></div>
+                            <div id="22"></div>
+                            <div id="23"></div>
+                            <div id="24"></div>
+                            <div id="25"></div>
+                            <div id="26"></div>
+                            <div id="27"></div>
+                            <div id="28"></div>
+                            <div id="29"></div>
+                            <div id="30"></div>
+                            <div id="31"></div>
+                            <div id="32"></div>
+                            <div id="33"></div>
+                            <div id="34"></div>
+                            <div id="35"></div>
+                            <div id="36"></div>
+                            <div id="37"></div>
+                            <div id="38"></div>
+                            <div id="39"></div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="col-8" id="main">
+                <!-- <h1>Main Area</h1> -->
+
+
+                <!-- Note Day Header -->
+                <div class="dayheader"><h1>1 Feb, 2020</h1></div>
+
+
+                <!-- Note area -->
+                <div class="note">testing my note.</div>
+
+
+
+                <div id="summernote"></div>
+                <button type="button" class="btn btn-primary" onclick="saveNote()">Save</button>
+                <p>
+                    <font color="#0000FF">Testing. testing.</font><br>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Loading javascript after html and css, following progressive web design. -->
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Hello Bootstrap 4',
+            tabsize: 2,
+            height: 100
+        });
+    </script>
+
+</body>
+
+</html>
