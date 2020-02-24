@@ -2,12 +2,81 @@
 
 highlightTodaysDate();
 
+addClickHandlerToCalDates()
 
 
 
 
 
 // Functions
+
+function addClickHandlerToCalDates() {
+  // let dates = document.getElementsByClassName("date");
+
+  //   The best way is to have as few event listeners as possible in your code. So instead of attaching an event listener to each and every button, you can attach 1 single event listener to the area div and make suitable changes based on event.target attribute.
+
+  // Run the below working code snippet:
+
+  document.getElementById('calendar-year').addEventListener('click', function (event) {
+    // func(event.target);
+    viewNotepage(event.target);
+  });
+}
+
+function viewNotepage(x) {
+
+  // get id of the clicked date
+  let clickeddateid = x.id;
+
+  console.log(clickeddateid);
+
+
+  // create a HTML collection of note pages.
+  notepagelist = document.getElementsByClassName('notepage');
+
+
+  // check if clicked item is of class = 'date'
+  if (x.classList.contains("date")) {
+
+
+    console.log("this is a date.");
+
+    // make the corresponding note page visible & don't display other note pages 
+    for (var i = 0; i < notepagelist.length; i++) {
+
+      var notepage = notepagelist[i];
+
+      // remove the preceding 'note' substring in the id of the notepage.
+      var notepageid = notepage.id.replace('note', '')
+
+
+
+      // match the clicked date with corresponding notepage
+      if (notepageid == clickeddateid) {
+
+        // make the corresponding notepage visible
+        notepage.classList.add("visible")
+
+        console.log(notepageid);
+
+
+      }
+      else {
+        // do not display other notepages
+        notepage.classList.remove("visible")
+
+
+      }
+
+    }
+
+
+  }
+
+}
+
+
+
 
 function saveNote() {
 
@@ -101,18 +170,20 @@ function highlightTodaysDate() {
 
 
 function newNote() {
-  notes = document.getElementsByClassName('note');
+  notes = document.getElementsByClassName('notepage');
 
 
   for (var i = 0; i < notes.length; i++) {
 
     var item = notes[i];
 
-    
-    item.classList.add("cal-today")
+
+    item.classList.add("visible")
 
   }
 
 
 
 }
+
+

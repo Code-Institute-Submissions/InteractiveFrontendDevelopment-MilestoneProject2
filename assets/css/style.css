@@ -2,19 +2,35 @@
     color: aquamarine;
 } */
 
+
+/* Calendar view */
+
+.row {
+    justify-content: center;
+}
+
+#sticky-sidebar {
+    justify-content: center;
+}
+
 #calendar-year {
     overflow-y: scroll;
     height: 90vh;
 
     /* margin-right: 40px; */
-    padding-right: 40px;
+    /* padding-right: 40px; */
 
     text-align: center;
+
 }
 
 .calendar-month {
     display: grid;
     grid-template: auto auto auto auto auto auto / auto auto auto auto auto auto auto;
+
+    grid-gap:5px;
+
+
 
     text-align: center;
 
@@ -24,6 +40,19 @@
     font-style: italic;
     color: turquoise;
 }
+
+.date {
+    cursor: pointer;
+    border: 3px solid transparent;
+
+    /* box-sizing: border-box; */
+}
+
+.date:hover {
+    border: 3px solid salmon;
+    border-radius: 5px;
+}
+
 
 .cal-today {
     /* background-color: rgba(126, 203, 255, 0.705); */
@@ -46,6 +75,17 @@
 }
 
 
+
+/* Note pages. */
+
+.notepage {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
 .note {
     border: 1px solid lightslategray;
     border-radius: 5px;
@@ -53,4 +93,12 @@
     min-height: 50px;
     padding: 15px;
     margin-bottom: 15px;
+    margin-top: 50px;
 }
+
+.dayheader {
+    display: flex;
+    justify-content: space-between;
+}
+
+
