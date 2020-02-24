@@ -2,17 +2,47 @@
     color: aquamarine;
 } */
 
+#calendar-year {
+    overflow-y: scroll;
+    height: 90vh;
+
+    /* margin-right: 40px; */
+    padding-right: 40px;
+
+    text-align: center;
+}
 
 .calendar-month {
     display: grid;
     grid-template: auto auto auto auto auto auto / auto auto auto auto auto auto auto;
 
     text-align: center;
+
+}
+
+.cal-day {
+    font-style: italic;
+    color: turquoise;
+}
+
+.cal-today {
+    /* background-color: rgba(126, 203, 255, 0.705); */
+
+    border: 3px solid palevioletred;
+    border-radius: 5px;
 }
 
 .my-container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+
+.cal-month-title {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    /* font-style: italic; */
+    font-weight: bold;
 }
 
 

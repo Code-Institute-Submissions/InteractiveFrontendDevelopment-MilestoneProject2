@@ -18,7 +18,13 @@
     <script src="assets/summernote-0.8.16-dist/summernote-bs4.min.js" crossorigin="anonymous"></script>
 
 
+    <!-- Mobile first design -->
+    <link rel="stylesheet" href="assets/css/mobile.css">
+
+
     <link rel="stylesheet" href="assets/css/style.css">
+
+
 
 
 
@@ -65,54 +71,598 @@
                         <!-- <file-bag>
                             testing
                         </file-bag> -->
+                        <div id="calendar-year">
+                            <div class="cal-month-title">January, 2020</div>
+                            <div class="calendar-month">
+                                <div class="cal-day">Mon</div>
+                                <div class="cal-day">Tue</div>
+                                <div class="cal-day">Wed</div>
+                                <div class="cal-day">Thu</div>
+                                <div class="cal-day">Fri</div>
+                                <div class="cal-day">Sat</div>
+                                <div class="cal-day">Sun</div>
+                                <div></div>
+                                <div></div>
+                                <div class="date" id="1">1</div>
+                                <div class="date" id="2">2</div>
+                                <div class="date" id="3">3</div>
+                                <div class="date" id="4">4</div>
+                                <div class="date" id="5">5</div>
+                                <div class="date" id="6">6</div>
+                                <div class="date" id="7">7</div>
+                                <div class="date" id="8">8</div>
+                                <div class="date" id="9">9</div>
+                                <div class="date" id="10">10</div>
+                                <div class="date" id="11">11</div>
+                                <div class="date" id="12">12</div>
+                                <div class="date" id="13">13</div>
+                                <div class="date" id="14">14</div>
+                                <div class="date" id="15">15</div>
+                                <div class="date" id="16">16</div>
+                                <div class="date" id="17">17</div>
+                                <div class="date" id="18">18</div>
+                                <div class="date" id="19">19</div>
+                                <div class="date" id="20">20</div>
+                                <div class="date" id="21">21</div>
+                                <div class="date" id="22">22</div>
+                                <div class="date" id="23">23</div>
+                                <div class="date" id="24">24</div>
+                                <div class="date" id="25">25</div>
+                                <div class="date" id="26">26</div>
+                                <div class="date" id="27">27</div>
+                                <div class="date" id="28">28</div>
+                                <div class="date" id="29">29</div>
+                                <div class="date" id="30">30</div>
+                                <div class="date" id="31">31</div>
+                            </div>
 
-                        <div class="calendar-month">
-                            <div id="1" class="cal-day">Mon</div>
-                            <div id="2" class="cal-day">Tue</div>
-                            <div id="3" class="cal-day">Wed</div>
-                            <div id="4" class="cal-day">Thu</div>
-                            <div id="5" class="cal-day">Fri</div>
-                            <div id="6" class="cal-day">Sat</div>
-                            <div id="7" class="cal-day">Sun</div>
-                            <div id="8">30</div>
-                            <div id="9">31</div>
-                            <div id="10">1</div>
-                            <div id="11">2</div>
-                            <div id="12">3</div>
-                            <div id="13">4</div>
-                            <div id="14">5</div>
-                            <div id="15">6</div>
-                            <div id="16">7</div>
-                            <div id="17">8</div>
-                            <div id="18">9</div>
-                            <div id="19">10</div>
-                            <div id="20"></div>
-                            <div id="21"></div>
-                            <div id="22"></div>
-                            <div id="23"></div>
-                            <div id="24"></div>
-                            <div id="25"></div>
-                            <div id="26"></div>
-                            <div id="27"></div>
-                            <div id="28"></div>
-                            <div id="29"></div>
-                            <div id="30"></div>
-                            <div id="31"></div>
-                            <div id="32"></div>
-                            <div id="33"></div>
-                            <div id="34"></div>
-                            <div id="35"></div>
-                            <div id="36"></div>
-                            <div id="37"></div>
-                            <div id="38"></div>
-                            <div id="39"></div>
+                            <div class="cal-month-title">February, 2020</div>
+                            <div class="calendar-month">
+                                <div class="cal-day">Mon</div>
+                                <div class="cal-day">Tue</div>
+                                <div class="cal-day">Wed</div>
+                                <div class="cal-day">Thu</div>
+                                <div class="cal-day">Fri</div>
+                                <div class="cal-day">Sat</div>
+                                <div class="cal-day">Sun</div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div class="date" id="32">1</div>
+                                <div class="date" id="33">2</div>
+                                <div class="date" id="34">3</div>
+                                <div class="date" id="35">4</div>
+                                <div class="date" id="36">5</div>
+                                <div class="date" id="37">6</div>
+                                <div class="date" id="38">7</div>
+                                <div class="date" id="39">8</div>
+                                <div class="date cal-today" id="40">9</div>
+                                <div class="date" id="41">10</div>
+                                <div class="date" id="42">11</div>
+                                <div class="date" id="43">12</div>
+                                <div class="date" id="44">13</div>
+                                <div class="date" id="45">14</div>
+                                <div class="date" id="46">15</div>
+                                <div class="date" id="47">16</div>
+                                <div class="date" id="48">17</div>
+                                <div class="date" id="49">18</div>
+                                <div class="date" id="50">19</div>
+                                <div class="date" id="51">20</div>
+                                <div class="date" id="52">21</div>
+                                <div class="date" id="53">22</div>
+                                <div class="date" id="54">23</div>
+                                <div class="date" id="55">24</div>
+                                <div class="date" id="56">25</div>
+                                <div class="date" id="57">26</div>
+                                <div class="date" id="58">27</div>
+                                <div class="date" id="59">28</div>
+                                <div class="date" id="60">29</div>
+                            </div>
+
+                            <div class="cal-month-title">March, 2020</div>
+                            <div class="calendar-month">
+
+                                <div class="cal-day">Mon</div>
+                                <div class="cal-day">Tue</div>
+                                <div class="cal-day">Wed</div>
+                                <div class="cal-day">Thu</div>
+                                <div class="cal-day">Fri</div>
+                                <div class="cal-day">Sat</div>
+                                <div class="cal-day">Sun</div>
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                                <div class="date" id="61">1</div>
+                                <div class="date" id="62">2</div>
+                                <div class="date" id="63">3</div>
+                                <div class="date" id="64">4</div>
+                                <div class="date" id="65">5</div>
+                                <div class="date" id="66">6</div>
+                                <div class="date" id="67">7</div>
+                                <div class="date" id="68">8</div>
+                                <div class="date" id="69">9</div>
+                                <div class="date" id="70">10</div>
+                                <div class="date" id="71">11</div>
+                                <div class="date" id="72">12</div>
+                                <div class="date" id="73">13</div>
+                                <div class="date" id="74">14</div>
+                                <div class="date" id="75">15</div>
+                                <div class="date" id="76">16</div>
+                                <div class="date" id="77">17</div>
+                                <div class="date" id="78">18</div>
+                                <div class="date" id="79">19</div>
+                                <div class="date" id="80">20</div>
+                                <div class="date" id="81">21</div>
+                                <div class="date" id="82">22</div>
+                                <div class="date" id="83">23</div>
+                                <div class="date" id="84">24</div>
+                                <div class="date" id="85">25</div>
+                                <div class="date" id="86">26</div>
+                                <div class="date" id="87">27</div>
+                                <div class="date" id="88">28</div>
+                                <div class="date" id="89">29</div>
+                                <div class="date" id="90">30</div>
+                                <div class="date" id="91">31</div>
+
+                            </div>
+
+                            <div class="cal-month-title">April, 2020</div>
+                            <div class="calendar-month">
+
+                                <div class="cal-day">Mon</div>
+                                <div class="cal-day">Tue</div>
+                                <div class="cal-day">Wed</div>
+                                <div class="cal-day">Thu</div>
+                                <div class="cal-day">Fri</div>
+                                <div class="cal-day">Sat</div>
+                                <div class="cal-day">Sun</div>
+
+                                <div></div>
+                                <div></div>
+
+                                <div class="date" id="92">1</div>
+                                <div class="date" id="93">2</div>
+                                <div class="date" id="94">3</div>
+                                <div class="date" id="95">4</div>
+                                <div class="date" id="96">5</div>
+                                <div class="date" id="97">6</div>
+                                <div class="date" id="98">7</div>
+                                <div class="date" id="99">8</div>
+                                <div class="date" id="100">9</div>
+                                <div class="date" id="101">10</div>
+                                <div class="date" id="102">11</div>
+                                <div class="date" id="103">12</div>
+                                <div class="date" id="104">13</div>
+                                <div class="date" id="105">14</div>
+                                <div class="date" id="106">15</div>
+                                <div class="date" id="107">16</div>
+                                <div class="date" id="108">17</div>
+                                <div class="date" id="109">18</div>
+                                <div class="date" id="110">19</div>
+                                <div class="date" id="111">20</div>
+                                <div class="date" id="112">21</div>
+                                <div class="date" id="113">22</div>
+                                <div class="date" id="114">23</div>
+                                <div class="date" id="115">24</div>
+                                <div class="date" id="116">25</div>
+                                <div class="date" id="117">26</div>
+                                <div class="date" id="118">27</div>
+                                <div class="date" id="119">28</div>
+                                <div class="date" id="120">29</div>
+                                <div class="date" id="121">30</div>
+
+                            </div>
+
+                            <div class="cal-month-title">May, 2020</div>
+                            <div class="calendar-month">
+
+                                <div class="cal-day">Mon</div>
+                                <div class="cal-day">Tue</div>
+                                <div class="cal-day">Wed</div>
+                                <div class="cal-day">Thu</div>
+                                <div class="cal-day">Fri</div>
+                                <div class="cal-day">Sat</div>
+                                <div class="cal-day">Sun</div>
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                                <div class="date" id="122">1</div>
+                                <div class="date" id="123">2</div>
+                                <div class="date" id="124">3</div>
+                                <div class="date" id="125">4</div>
+                                <div class="date" id="126">5</div>
+                                <div class="date" id="127">6</div>
+                                <div class="date" id="128">7</div>
+                                <div class="date" id="129">8</div>
+                                <div class="date" id="130">9</div>
+                                <div class="date" id="131">10</div>
+                                <div class="date" id="132">11</div>
+                                <div class="date" id="133">12</div>
+                                <div class="date" id="134">13</div>
+                                <div class="date" id="135">14</div>
+                                <div class="date" id="136">15</div>
+                                <div class="date" id="137">16</div>
+                                <div class="date" id="138">17</div>
+                                <div class="date" id="139">18</div>
+                                <div class="date" id="140">19</div>
+                                <div class="date" id="141">20</div>
+                                <div class="date" id="142">21</div>
+                                <div class="date" id="143">22</div>
+                                <div class="date" id="144">23</div>
+                                <div class="date" id="145">24</div>
+                                <div class="date" id="146">25</div>
+                                <div class="date" id="147">26</div>
+                                <div class="date" id="148">27</div>
+                                <div class="date" id="149">28</div>
+                                <div class="date" id="150">29</div>
+                                <div class="date" id="151">30</div>
+                                <div class="date" id="152">31</div>
+
+                            </div>
+
+                            <div class="cal-month-title">June, 2020</div>
+                            <div class="calendar-month">
+
+                                <div class="cal-day">Mon</div>
+                                <div class="cal-day">Tue</div>
+                                <div class="cal-day">Wed</div>
+                                <div class="cal-day">Thu</div>
+                                <div class="cal-day">Fri</div>
+                                <div class="cal-day">Sat</div>
+                                <div class="cal-day">Sun</div>
+
+                                <div class="date" id="153">1</div>
+                                <div class="date" id="154">2</div>
+                                <div class="date" id="155">3</div>
+                                <div class="date" id="156">4</div>
+                                <div class="date" id="157">5</div>
+                                <div class="date" id="158">6</div>
+                                <div class="date" id="159">7</div>
+                                <div class="date" id="160">8</div>
+                                <div class="date" id="161">9</div>
+                                <div class="date" id="162">10</div>
+                                <div class="date" id="163">11</div>
+                                <div class="date" id="164">12</div>
+                                <div class="date" id="165">13</div>
+                                <div class="date" id="166">14</div>
+                                <div class="date" id="167">15</div>
+                                <div class="date" id="168">16</div>
+                                <div class="date" id="169">17</div>
+                                <div class="date" id="170">18</div>
+                                <div class="date" id="171">19</div>
+                                <div class="date" id="172">20</div>
+                                <div class="date" id="173">21</div>
+                                <div class="date" id="174">22</div>
+                                <div class="date" id="175">23</div>
+                                <div class="date" id="176">24</div>
+                                <div class="date" id="177">25</div>
+                                <div class="date" id="178">26</div>
+                                <div class="date" id="179">27</div>
+                                <div class="date" id="180">28</div>
+                                <div class="date" id="181">29</div>
+                                <div class="date" id="182">30</div>
+
+                            </div>
+
+                            <div class="cal-month-title">July, 2020</div>
+                            <div class="calendar-month">
+
+                                <div class="cal-day">Mon</div>
+                                <div class="cal-day">Tue</div>
+                                <div class="cal-day">Wed</div>
+                                <div class="cal-day">Thu</div>
+                                <div class="cal-day">Fri</div>
+                                <div class="cal-day">Sat</div>
+                                <div class="cal-day">Sun</div>
+
+                                <div></div>
+                                <div></div>
+
+                                <div class="date" id="183">1</div>
+                                <div class="date" id="184">2</div>
+                                <div class="date" id="185">3</div>
+                                <div class="date" id="186">4</div>
+                                <div class="date" id="187">5</div>
+                                <div class="date" id="188">6</div>
+                                <div class="date" id="189">7</div>
+                                <div class="date" id="190">8</div>
+                                <div class="date" id="191">9</div>
+                                <div class="date" id="192">10</div>
+                                <div class="date" id="193">11</div>
+                                <div class="date" id="194">12</div>
+                                <div class="date" id="195">13</div>
+                                <div class="date" id="196">14</div>
+                                <div class="date" id="197">15</div>
+                                <div class="date" id="198">16</div>
+                                <div class="date" id="199">17</div>
+                                <div class="date" id="200">18</div>
+                                <div class="date" id="201">19</div>
+                                <div class="date" id="202">20</div>
+                                <div class="date" id="203">21</div>
+                                <div class="date" id="204">22</div>
+                                <div class="date" id="205">23</div>
+                                <div class="date" id="206">24</div>
+                                <div class="date" id="207">25</div>
+                                <div class="date" id="208">26</div>
+                                <div class="date" id="209">27</div>
+                                <div class="date" id="210">28</div>
+                                <div class="date" id="211">29</div>
+                                <div class="date" id="212">30</div>
+                                <div class="date" id="213">31</div>
+
+                            </div>
 
 
+                            <div class="cal-month-title">August, 2020</div>
+                            <div class="calendar-month">
+
+                                <div class="cal-day">Mon</div>
+                                <div class="cal-day">Tue</div>
+                                <div class="cal-day">Wed</div>
+                                <div class="cal-day">Thu</div>
+                                <div class="cal-day">Fri</div>
+                                <div class="cal-day">Sat</div>
+                                <div class="cal-day">Sun</div>
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                                <div class="date" id="214">1</div>  
+                                <div class="date" id="215">2</div>
+                                <div class="date" id="216">3</div>
+                                <div class="date" id="217">4</div>
+                                <div class="date" id="218">5</div>
+                                <div class="date" id="219">6</div>
+                                <div class="date" id="220">7</div>
+                                <div class="date" id="221">8</div>
+                                <div class="date" id="222">9</div>
+                                <div class="date" id="223">10</div>
+                                <div class="date" id="224">11</div>
+                                <div class="date" id="225">12</div>
+                                <div class="date" id="226">13</div>
+                                <div class="date" id="227">14</div>
+                                <div class="date" id="228">15</div>
+                                <div class="date" id="229">16</div>
+                                <div class="date" id="230">17</div>
+                                <div class="date" id="231">18</div>
+                                <div class="date" id="232">19</div>
+                                <div class="date" id="233">20</div>
+                                <div class="date" id="234">21</div>
+                                <div class="date" id="235">22</div>
+                                <div class="date" id="236">23</div>
+                                <div class="date" id="237">24</div>
+                                <div class="date" id="238">25</div>
+                                <div class="date" id="239">26</div>
+                                <div class="date" id="240">27</div>
+                                <div class="date" id="241">28</div>
+                                <div class="date" id="242">29</div>
+                                <div class="date" id="243">30</div>
+                                <div class="date" id="244">31</div>
+                                
+
+
+                            </div>
+
+
+                            <div class="cal-month-title">September, 2020</div>
+                            <div class="calendar-month">
+
+                                <div class="cal-day">Mon</div>
+                                <div class="cal-day">Tue</div>
+                                <div class="cal-day">Wed</div>
+                                <div class="cal-day">Thu</div>
+                                <div class="cal-day">Fri</div>
+                                <div class="cal-day">Sat</div>
+                                <div class="cal-day">Sun</div>
+
+                                <div></div>
+
+                                <div class="date" id="245">1</div>
+                                <div class="date" id="246">2</div>
+                                <div class="date" id="247">3</div>
+                                <div class="date" id="248">4</div>
+                                <div class="date" id="249">5</div>
+                                <div class="date" id="250">6</div>
+                                <div class="date" id="251">7</div>
+                                <div class="date" id="252">8</div>
+                                <div class="date" id="253">9</div>
+                                <div class="date" id="254">10</div>
+                                <div class="date" id="255">11</div>
+                                <div class="date" id="256">12</div>
+                                <div class="date" id="257">13</div>
+                                <div class="date" id="258">14</div>
+                                <div class="date" id="259">15</div>
+                                <div class="date" id="260">16</div>
+                                <div class="date" id="261">17</div>
+                                <div class="date" id="262">18</div>
+                                <div class="date" id="263">19</div>
+                                <div class="date" id="264">20</div>
+                                <div class="date" id="265">21</div>
+                                <div class="date" id="266">22</div>
+                                <div class="date" id="267">23</div>
+                                <div class="date" id="268">24</div>
+                                <div class="date" id="269">25</div>
+                                <div class="date" id="270">26</div>
+                                <div class="date" id="271">27</div>
+                                <div class="date" id="272">28</div>
+                                <div class="date" id="273">29</div>
+                                <div class="date" id="274">30</div>
+                                
+
+
+                            </div>
+
+
+                            <div class="cal-month-title">October, 2020</div>
+                            <div class="calendar-month">
+
+                                <div class="cal-day">Mon</div>
+                                <div class="cal-day">Tue</div>
+                                <div class="cal-day">Wed</div>
+                                <div class="cal-day">Thu</div>
+                                <div class="cal-day">Fri</div>
+                                <div class="cal-day">Sat</div>
+                                <div class="cal-day">Sun</div>
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                                <div class="date" id="275">1</div>
+                                <div class="date" id="276">2</div>
+                                <div class="date" id="277">3</div>
+                                <div class="date" id="278">4</div>
+                                <div class="date" id="279">5</div>
+                                <div class="date" id="280">6</div>
+                                <div class="date" id="281">7</div>
+                                <div class="date" id="282">8</div>
+                                <div class="date" id="283">9</div>
+                                <div class="date" id="284">10</div>
+                                <div class="date" id="285">11</div>
+                                <div class="date" id="286">12</div>
+                                <div class="date" id="287">13</div>
+                                <div class="date" id="288">14</div>
+                                <div class="date" id="289">15</div>
+                                <div class="date" id="290">16</div>
+                                <div class="date" id="291">17</div>
+                                <div class="date" id="292">18</div>
+                                <div class="date" id="293">19</div>
+                                <div class="date" id="294">20</div>
+                                <div class="date" id="295">21</div>
+                                <div class="date" id="296">22</div>
+                                <div class="date" id="297">23</div>
+                                <div class="date" id="298">24</div>
+                                <div class="date" id="299">25</div>
+                                <div class="date" id="300">26</div>
+                                <div class="date" id="301">27</div>
+                                <div class="date" id="302">28</div>
+                                <div class="date" id="303">29</div>
+                                <div class="date" id="304">30</div>
+                                <div class="date" id="305">31</div>
+                                
+
+                            </div>
+
+                            <div class="cal-month-title">November, 2020</div>
+                            <div class="calendar-month">
+
+                                <div class="cal-day">Mon</div>
+                                <div class="cal-day">Tue</div>
+                                <div class="cal-day">Wed</div>
+                                <div class="cal-day">Thu</div>
+                                <div class="cal-day">Fri</div>
+                                <div class="cal-day">Sat</div>
+                                <div class="cal-day">Sun</div>
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+
+                                <div class="date" id="306">1</div>
+                                <div class="date" id="307">2</div>
+                                <div class="date" id="308">3</div>
+                                <div class="date" id="309">4</div>
+                                <div class="date" id="310">5</div>
+                                <div class="date" id="311">6</div>
+                                <div class="date" id="312">7</div>
+                                <div class="date" id="313">8</div>
+                                <div class="date" id="314">9</div>
+                                <div class="date" id="315">10</div>
+                                <div class="date" id="316">11</div>
+                                <div class="date" id="317">12</div>
+                                <div class="date" id="318">13</div>
+                                <div class="date" id="319">14</div>
+                                <div class="date" id="320">15</div>
+                                <div class="date" id="321">16</div>
+                                <div class="date" id="322">17</div>
+                                <div class="date" id="323">18</div>
+                                <div class="date" id="324">19</div>
+                                <div class="date" id="325">20</div>
+                                <div class="date" id="326">21</div>
+                                <div class="date" id="327">22</div>
+                                <div class="date" id="328">23</div>
+                                <div class="date" id="329">24</div>
+                                <div class="date" id="330">25</div>
+                                <div class="date" id="331">26</div>
+                                <div class="date" id="332">27</div>
+                                <div class="date" id="333">28</div>
+                                <div class="date" id="334">29</div>
+                                <div class="date" id="335">30</div>
+                                
+
+                            </div>
+
+
+                            <div class="cal-month-title">December, 2020</div>
+                            <div class="calendar-month">
+
+                                <div class="cal-day">Mon</div>
+                                <div class="cal-day">Tue</div>
+                                <div class="cal-day">Wed</div>
+                                <div class="cal-day">Thu</div>
+                                <div class="cal-day">Fri</div>
+                                <div class="cal-day">Sat</div>
+                                <div class="cal-day">Sun</div>
+
+                                <div></div>
+
+
+                                <div class="date" id="336">1</div>
+                                <div class="date" id="337">2</div>
+                                <div class="date" id="338">3</div>
+                                <div class="date" id="339">4</div>
+                                <div class="date" id="340">5</div>
+                                <div class="date" id="341">6</div>
+                                <div class="date" id="342">7</div>
+                                <div class="date" id="343">8</div>
+                                <div class="date" id="344">9</div>
+                                <div class="date" id="345">10</div>
+                                <div class="date" id="346">11</div>
+                                <div class="date" id="347">12</div>
+                                <div class="date" id="348">13</div>
+                                <div class="date" id="349">14</div>
+                                <div class="date" id="350">15</div>
+                                <div class="date" id="351">16</div>
+                                <div class="date" id="352">17</div>
+                                <div class="date" id="353">18</div>
+                                <div class="date" id="354">19</div>
+                                <div class="date" id="355">20</div>
+                                <div class="date" id="356">21</div>
+                                <div class="date" id="357">22</div>
+                                <div class="date" id="358">23</div>
+                                <div class="date" id="359">24</div>
+                                <div class="date" id="360">25</div>
+                                <div class="date" id="361">26</div>
+                                <div class="date" id="362">27</div>
+                                <div class="date" id="363">28</div>
+                                <div class="date" id="364">29</div>
+                                <div class="date" id="365">30</div>
+                                <div class="date" id="366">31</div>
+                            </div>
                         </div>
+
 
                     </div>
 
                 </div>
+
             </div>
 
 
@@ -123,19 +673,135 @@
 
 
                 <!-- Note Day Header -->
-                <div class="dayheader"><h1>1 Feb, 2020</h1></div>
+                <div class="dayheader">
+                    <h1>24 Feb, 2020</h1>
+                </div>
+
+                <button class="button-primary" id="newnotebutton" onclick="newNote()">New note</button>
 
 
                 <!-- Note area -->
-                <div class="note">testing my note.</div>
+                <!-- <div class="note">testing my note.</div> -->
 
 
 
+                <div class="notepage" id="note1"></div>
+                <div class="notepage" id="note2"></div>
+                <div class="notepage" id="note3"></div>
+                <div class="notepage" id="note4"></div>
+                <div class="notepage" id="note5"></div>
+                <div class="notepage" id="note6"></div>
+                <div class="notepage" id="note7"></div>
+                <div class="notepage" id="note8"></div>
+                <div class="notepage" id="note9"></div>
+                <div class="notepage" id="note10"></div>
+                <div class="notepage" id="note11"></div>
+                <div class="notepage" id="note12"></div>
+                <div class="notepage" id="note13"></div>
+                <div class="notepage" id="note14"></div>
+                <div class="notepage" id="note15"></div>
+                <div class="notepage" id="note16"></div>
+                <div class="notepage" id="note17"></div>
+                <div class="notepage" id="note18"></div>
+                <div class="notepage" id="note19"></div>
+                <div class="notepage" id="note20"></div>
+                <div class="notepage" id="note21"></div>
+                <div class="notepage" id="note22"></div>
+                <div class="notepage" id="note23"></div>
+                <div class="notepage" id="note24"></div>
+                <div class="notepage" id="note25"></div>
+                <div class="notepage" id="note26"></div>
+                <div class="notepage" id="note27"></div>
+                <div class="notepage" id="note28"></div>
+                <div class="notepage" id="note29"></div>
+                <div class="notepage" id="note30"></div>
+                <div class="notepage" id="note31"></div>
+                <div class="notepage" id="note32"></div>
+                <div class="notepage" id="note33"></div>
+                <div class="notepage" id="note34"></div>
+                <div class="notepage" id="note35"></div>
+                <div class="notepage" id="note36"></div>
+                <div class="notepage" id="note37"></div>
+                <div class="notepage" id="note38"></div>
+                <div class="notepage" id="note39"></div>
+                <div class="notepage" id="note40"></div>
+                <div class="notepage" id="note41"></div>
+                <div class="notepage" id="note42"></div>
+                <div class="notepage" id="note43"></div>
+                <div class="notepage" id="note44"></div>
+                <div class="notepage" id="note45"></div>
+                <div class="notepage" id="note46"></div>
+                <div class="notepage" id="note47"></div>
+                <div class="notepage" id="note48"></div>
+                <div class="notepage" id="note49"></div>
+                <div class="notepage" id="note50"></div>
+                <div class="notepage" id="note51"></div>
+                <div class="notepage" id="note52"></div>
+                <div class="notepage" id="note53"></div>
+                <div class="notepage" id="note54"></div>
+                <div class="notepage" id="note55"></div>
+                <div class="notepage" id="note56"></div>
+                <div class="notepage" id="note57"></div>
+                <div class="notepage" id="note58"></div>
+                <div class="notepage" id="note59"></div>
+                <div class="notepage" id="note60"></div>
+                <div class="notepage" id="note61"></div>
+                <div class="notepage" id="note62"></div>
+                <div class="notepage" id="note63"></div>
+                <div class="notepage" id="note64"></div>
+                <div class="notepage" id="note65"></div>
+                <div class="notepage" id="note66"></div>
+                <div class="notepage" id="note67"></div>
+                <div class="notepage" id="note68"></div>
+                <div class="notepage" id="note69"></div>
+                <div class="notepage" id="note70"></div>
+                <div class="notepage" id="note71"></div>
+                <div class="notepage" id="note72"></div>
+                <div class="notepage" id="note73"></div>
+                <div class="notepage" id="note74"></div>
+                <div class="notepage" id="note75"></div>
+                <div class="notepage" id="note76"></div>
+                <div class="notepage" id="note77"></div>
+                <div class="notepage" id="note78"></div>
+                <div class="notepage" id="note79"></div>
+                <div class="notepage" id="note80"></div>
+                <div class="notepage" id="note81"></div>
+                <div class="notepage" id="note82"></div>
+                <div class="notepage" id="note83"></div>
+                <div class="notepage" id="note84"></div>
+                <div class="notepage" id="note85"></div>
+                <div class="notepage" id="note86"></div>
+                <div class="notepage" id="note87"></div>
+                <div class="notepage" id="note88"></div>
+                <div class="notepage" id="note89"></div>
+                <div class="notepage" id="note90"></div>
+                <div class="notepage" id="note91"></div>
+                <div class="notepage" id="note92"></div>
+                <div class="notepage" id="note93"></div>
+                <div class="notepage" id="note94"></div>
+                <div class="notepage" id="note95"></div>
+                <div class="notepage" id="note96"></div>
+                <div class="notepage" id="note97"></div>
+                <div class="notepage" id="note98"></div>
+                <div class="notepage" id="note99"></div>
+                <div class="notepage" id="note100"></div>
+
+
+
+
+
+
+
+
+                <!-- Editing area  -->
                 <div id="summernote"></div>
                 <button type="button" class="btn btn-primary" onclick="saveNote()">Save</button>
-                <p>
+
+
+                <!-- <p>
                     <font color="#0000FF">Testing. testing.</font><br>
-                </p>
+                </p> -->
+
 
             </div>
         </div>

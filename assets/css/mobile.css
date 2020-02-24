@@ -1,0 +1,32 @@
+/* Mobile view */
+
+@media (max-width: 767px) {
+
+
+    .my-container {
+        padding: 1px;
+    }
+
+
+    body {
+        color: tomato;
+    }
+
+    #main {
+        display: none;
+    }
+
+    #sticky-sidebar {
+        display: inline;
+
+        flex: unset;
+        color: turquoise;]
+        
+        max-width: 100%;
+    }
+
+
+
+
+
+}
