@@ -676,7 +676,7 @@
                 <!-- Note Day Header -->
                 <div class="dayheader">
                     <h1>24 Feb, 2020</h1>
-                    <button class="button-primary" id="newnotebutton" onclick="newNote()">New note</button>
+                    <button class="btn btn-primary" id="newnotebutton" onclick="newNote()">Add note</button>
 
                 </div>
 
@@ -798,8 +798,10 @@
 
 
                 <!-- Editing area  -->
-                <!-- <div id="summernote"></div>
-                <button type="button" class="btn btn-primary" onclick="saveNote()">Save</button> -->
+                <div id="note-editor" class="note-editor">
+                    <div id="summernote"></div>
+                    <!-- <button type="button" class="btn btn-primary" id="savenotebtn" onclick="saveNote()">Save</button> -->
+                </div>
 
 
                 <!-- <p>
@@ -818,13 +820,13 @@
 
     <script src="assets/js/main.js"></script>
 
-    <script>
+    <!-- <script>
         $('#summernote').summernote({
             placeholder: 'Hello Bootstrap 4',
             tabsize: 2,
             height: 100
         });
-    </script>
+    </script> -->
 
 </body>
 

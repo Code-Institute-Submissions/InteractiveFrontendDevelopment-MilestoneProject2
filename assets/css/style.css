@@ -18,7 +18,7 @@
     height: 90vh;
 
     /* margin-right: 40px; */
-    /* padding-right: 40px; */
+    padding-right: 55px;
 
     text-align: center;
 
@@ -99,6 +99,8 @@
 .dayheader {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 
+/* Note editor */

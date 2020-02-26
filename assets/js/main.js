@@ -5,11 +5,7 @@ highlightTodaysDate();
 addClickHandlerToCalDates()
 
 
-
-
-
 // Functions
-
 function addClickHandlerToCalDates() {
   // let dates = document.getElementsByClassName("date");
 
@@ -57,8 +53,9 @@ function viewNotepage(x) {
         // make the corresponding notepage visible
         notepage.classList.add("visible")
 
-        console.log(notepageid);
 
+
+        console.log(notepageid);
 
       }
       else {
@@ -76,32 +73,16 @@ function viewNotepage(x) {
 }
 
 
-
-
-function saveNote() {
-
-  var markupStr = $('#summernote').summernote('code');
-
-  console.log(markupStr)
-
-}
-
 // https://auth0.com/blog/web-components-how-to-craft-your-own-custom-components/
-window.customElements.define('file-bag', class extends HTMLElement {
-  constructor() {
-    super();
-    var shadowRoot = this.attachShadow({ mode: 'open' });
-    shadowRoot.innerHTML = `<strong>Shadow dom super powers for the win!</strong>`;
-  }
-});
+// window.customElements.define('file-bag', class extends HTMLElement {
+//   constructor() {
+//     super();
+//     var shadowRoot = this.attachShadow({ mode: 'open' });
+//     shadowRoot.innerHTML = `<strong>Shadow dom super powers for the win!</strong>`;
+//   }
+// });
 
 
-
-function selectTodaysDate() {
-
-  todaysday = Math.round((Date.now() - Date.parse(new Date().getFullYear(), 0, 0)) / 86400000) + 1
-
-}
 
 function highlightTodaysDate() {
 
@@ -170,6 +151,11 @@ function highlightTodaysDate() {
 
 
 function newNote() {
+
+  // Open the rich text editor in the 'main' area. 
+
+
+  // make the notepage hidden.
   notes = document.getElementsByClassName('notepage');
 
 
@@ -177,13 +163,43 @@ function newNote() {
 
     var item = notes[i];
 
-
-    item.classList.add("visible")
+    item.classList.remove("visible")
 
   }
 
+  // launch the editor
+  $('#summernote').summernote({
+    placeholder: 'Add new note',
+    tabsize: 2,
+    height: 500
+  })
 
+
+
+
+  // append the Save button
+  $('#note-editor').append('<button type="button" class="btn btn-primary" id="savenotebtn" onclick="saveNote()">Save</button>');
 
 }
 
 
+function saveNote() {
+
+  var markupStr = $('#summernote').summernote('code');
+
+  console.log(markupStr)
+
+  // make the editor invisible
+  $('#summernote').summernote('reset');
+  $('#summernote').summernote('destroy');
+
+
+  // remove the 'Save' button.
+  $('#savenotebtn').remove();
+
+
+  // append the notepage again.
+
+
+
+}
