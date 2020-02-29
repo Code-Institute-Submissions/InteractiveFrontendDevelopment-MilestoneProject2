@@ -177,12 +177,8 @@ function addNote(x) {
   // Add a note to the currently open 'notepage'.
 
 
-  // console.log(x);
-
-
   // hide the 'back to calendar button' if in mobile view:
   $("#backtocal").css({ "display": "none" });
-
 
 
 
@@ -286,8 +282,37 @@ function saveNote(x) {
   var markupStr = $('#summernote').summernote('code');
 
 
+  // check if there is a latestnodeid initialised in localstorage
+  if ("latestnoteid" in localStorage) {
+    // retrieve the latestnoteid from localstorage
+    var lastnoteid = localStorage.getItem("latestnoteid");
+    // convert the id to a number
+    var lastnoteidint = lastnoteid.replace("note", "");
+    var number = parseInt(lastnoteidint);
+    // increment the value
+    var currentnoteid = number + 1;
+    // rename to string format
+    var currentnoteidstring = "note" + currentnoteid;
+    // update local storage
+    localStorage.setItem("latestnoteid", currentnoteidstring);
+
+    // Format the user generated note text in to a 'note' div.
+    var savedNote = '<div class="note" id="' + currentnoteidstring + '">' + markupStr + '</div>'
+  }
+  else {
+    var currentnoteidstring = "note1";
+    // set the lastnoteid in localstorage
+    localStorage.setItem("latestnoteid", currentnoteidstring);
+
+    console.log("first initialisation: " + currentnoteidstring);
+
+    // Format the user generated note text in to a 'note' div.
+    var savedNote = '<div class="note" id="' + currentnoteidstring + '">' + markupStr + '</div>'
+
+  }
+
   // Format the user generated note text in to a 'note' div.
-  var savedNote = '<div class="note">' + markupStr + '</div>'
+  // var savedNote = '<div class="note" id="' + currentnoteidstring + '">' + markupStr + '</div>'
 
   console.log(savedNote)
 
@@ -302,6 +327,10 @@ function saveNote(x) {
 
   // append new note to the relevant notepage div:
   $(notepageidentifier).append(savedNote);
+
+
+  addClickHandlerToNotes()
+
 
 
 
@@ -346,35 +375,119 @@ function saveNote(x) {
 
 
 function addClickHandlerToNotes() {
-  // let dates = document.getElementsByClassName("date");
 
-  //   The best way is to have as few event listeners as possible in your code. So instead of attaching an event listener to each and every button, you can attach 1 single event listener to the area div and make suitable changes based on event.target attribute.
+  // var notes = document.getElementsByClassName("note");
 
-  // Run the below working code snippet:
+  // for (var i = 0; i < notes.length; i++) {
+  //   var note = notes[i];
+  //   note.addEventListener('click', function (event) {
+  //     openNoteEditDeletePage(note)
+  //   });
 
-  // $('.notepage').addEventListener('click', function (event) {
-  //   // func(event.target);
-  //   console.log("you clicked the notepage")
+  // }
+
+  // $("#notepages").on('click', function (event) {
+
+  //   // check if clicked item is of class = 'note'
+  //   if (event.classList.contains("note")) {
+  //     openNoteEditDeletePage(event.target);
+  //   }
+
   // });
 
-  var notes = document.getElementsByClassName("note");
 
-  for (var i = 0; i < notes.length; i++) {
-    var note = notes[i];
-    note.addEventListener('click', function (note){
-      openEditOrDeleteModal(note)
-    });
-    // console.log(note.innerHTML)
-  }
+  // document.getElementById('notepages').addEventListener('click', function (event) {
+  //   // func(event.target);
+  //   openNoteEditDeletePage(this);
+  // }, false);
+
+//   $('.note').on('click', function(e) {
+//     if (e.target !== this) return;
+ 
+//      console.log( 'clicked the foobar' );
+//  });
+  
+
+var notelist =document.querySelectorAll('.note');
+for(var i=0;i<notelist.length;i++){
+  notelist[i].addEventListener('click',function(event){editNote(this)},false);
 }
 
 
 
-function openEditOrDeleteModal(note) {
-  // alert(note);
-  mynote = note.id;
-  console.log(mynote);
-  
+}
+
+
+
+function editNote(note) {
+
+  console.log(note);
+
+    // Add a note to the currently open 'notepage'.
+
+
+  // hide the 'back to calendar button' if in mobile view:
+  $("#backtocal").css({ "display": "none" });
+
+
+
+  // make All the current notepage hidden.
+  var notes = document.getElementsByClassName('notepage');
+
+  // make all notepages hidden.
+  for (var i = 0; i < notes.length; i++) {
+
+    var item = notes[i];
+
+    item.classList.add("hidden");
+  }
+
+
+  // launch the editor at correct height and with appropriate toolbar for responsive display:
+  if (window.matchMedia('screen and (max-width: 991px)').matches) {
+
+    $('#summernote').summernote({
+      placeholder: 'Add new note',
+      tabsize: 2,
+      // height: 500
+      toolbar: [
+        ['style', ['style']],
+        ['font', ['bold', 'underline', 'clear']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['view', ['fullscreen']],
+      ]
+    })
+
+  }
+  else {
+
+    $('#summernote').summernote({
+      placeholder: 'Add new note',
+      tabsize: 2,
+      height: 500
+    })
+  }
+
+
+
+
+
+  // Create a corresponding id for the Save button.
+  let currentID = note.id;
+
+  let fulleditbuttons = '<div class="editorbuttongroup"><button type="button" class="btn btn-primary savenotebutton" id="' + 'save' + currentID + '" onclick="saveNote(this)">Save Edit</button><button type="button" class="btn btn-danger deletenotebutton" id="' + 'delete' + currentID + '" onclick="deleteNote(this)">Delete</button><button type="button" class="btn btn-light cancelnotebutton" id="' + 'cancel' + currentID + '" onclick="cancelNote(this)">Cancel</button></div>'
+
+  // append the Save, Delete and the Cancel buttons
+  $('#note-editor').append(fulleditbuttons);
+
+
+  // hide the 'Add note' button.
+  $(".addnotebutton").addClass("hidden");
+
+
+
+
 }
 
 
