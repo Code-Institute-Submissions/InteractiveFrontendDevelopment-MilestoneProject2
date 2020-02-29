@@ -64,7 +64,7 @@
 
 
 
-            <div class="col-4" id="sticky-sidebar">
+            <div class="col-lg-4" id="sticky-sidebar">
                 <div class="sticky-top">
                     <!-- sidebar -->
                     <div>
@@ -657,7 +657,10 @@
                                 <div class="date" id="365">30</div>
                                 <div class="date" id="366">31</div>
                             </div>
+                            <div class="calspacer"></div>
+
                         </div>
+
 
 
                     </div>
@@ -669,7 +672,7 @@
 
 
 
-            <div class="col-8" id="main">
+            <div class="col-lg-8" id="main">
                 <!-- <h1>Main Area</h1> -->
 
                 <div id="mainnoteview">
@@ -678,12 +681,12 @@
                     <!-- Note Day Header -->
                     <div class="dayheader">
                         <!-- <h1>24 Feb, 2020</h1> -->
-                        <h1 id="headerdate">%date%</h1>
+                        <h1 id="headerdate"></h1>
                         <button class="btn btn-primary addnotebutton" onclick="addNote(this)">Add note</button>
 
                     </div>
 
-                    
+
 
                 </div>
 
@@ -1061,18 +1064,22 @@
                     <div class="notepage hidden" id="notepage365"></div>
                     <div class="notepage hidden" id="notepage366"></div>
 
+                    <!-- Editing area  -->
+                    <div id="note-editor" class="note-editor">
+                        <div id="summernote"></div>
+                        <!-- <button type="button" class="btn btn-primary" id="savenotebtn" onclick="saveNote()">Save</button> -->
+                    </div>
+
                 </div>
 
+                <button class="btn btn-primary" id="backtocal" onclick="backToCalendar()"><- Cal</button>
 
 
 
 
 
-                <!-- Editing area  -->
-                <div id="note-editor" class="note-editor">
-                    <div id="summernote"></div>
-                    <!-- <button type="button" class="btn btn-primary" id="savenotebtn" onclick="saveNote()">Save</button> -->
-                </div>
+
+
 
 
                 <!-- <p>
@@ -1088,6 +1095,8 @@
 
 
     <!-- Loading javascript after html and css, following progressive web design. -->
+
+    <script src="assets/js/formatteddates.js"></script>
 
     <script src="assets/js/main.js"></script>
 

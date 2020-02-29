@@ -3,14 +3,24 @@
 } */
 
 
-/* Calendar view */
+/* SIDEVIEW: Calendar view */
 
 .row {
     justify-content: center;
 }
 
+.my-container {
+    padding-left: 55px;
+    padding-right: 20px;
+}
+
+
+
 #sticky-sidebar {
     justify-content: center;
+    /* position: fixed;
+    top: 70px;
+    left: 0px; */
 }
 
 #calendar-year {
@@ -21,6 +31,8 @@
     padding-right: 55px;
 
     text-align: center;
+
+    padding-bottom: 50px;
 
 }
 
@@ -38,7 +50,7 @@
 
 .cal-day {
     font-style: italic;
-    color: turquoise;
+    color: #007ACC;
 }
 
 .date {
@@ -61,11 +73,6 @@
     border-radius: 5px;
 }
 
-.my-container {
-    padding-left: 55px;
-    padding-right: 55px;
-}
-
 
 .cal-month-title {
     padding-top: 30px;
@@ -75,25 +82,55 @@
 }
 
 
+.calspacer {
+    height: 100px;
+}
 
-/* Note pages. */
+
+
+/* MAIN VIEW. */
+
+#main {
+    padding-right: 0;
+}
+
+
+
+/* summer note */
+.editorbuttongroup {
+    /* padding-right: 55px; */
+    display: flex;
+    justify-content: right;
+}
+
+
+
 
 .hidden {
     display: none;
 }
 
-/* .visible {
-    display: block;
-} */
+#notepages {
+    overflow-y: scroll;
+    height: 80vh;
+
+    padding-right: 55px;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+
 
 .note {
     border: 1px solid lightslategray;
     border-radius: 5px;
     width: 100%;
     min-height: 50px;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 15px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
 .dayheader {
@@ -103,11 +140,20 @@
     margin-bottom: 30px;
     /* border: 2px solid; */
 
+    border-bottom: 5px solid #007ACC;
+    /* background-color: rgb(32, 184, 32); */
+
+    margin-right: 65px;
+
 }
 
 #headerdate {
     padding: 0px;
     margin: 0px;
+}
+
+.addnotebutton {
+    /* margin-right: 55px; */
 }
 
 

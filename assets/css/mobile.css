@@ -1,6 +1,11 @@
 /* Mobile view */
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+
+
+    body {
+        overflow-y: auto;
+    }
 
 
     .my-container {
@@ -8,24 +13,39 @@
     }
 
     #calendar-year {
-        overflow-y: visible;
-        height: auto;
+        /* overflow-y: auto; */
+        /* height:  */
 
         padding: 20px;
 
+        /* padding-top: 50px; */
+        /* margin-top: 50px; */
+
+        height: auto;
+
+        /* z-index: -1; */
+
     }
 
 
-    body {
-        /* color: tomato; */
-    }
 
     #main {
         display: none;
+
+        /* padding-right: 0px;
+
+        margin-right: 0px;
+
+        flex-basis: 100%; */
+
+        margin-left: 10px;
+
+
+        
     }
 
     #sticky-sidebar {
-        display: inline;
+        /* display: inline; */
 
         flex: unset;
         /* color: turquoise; */
@@ -33,6 +53,9 @@
         max-width: 100%;
 
         padding-right: unset;
+
+        /* position: static;
+        z-index: -1; */
     }
 
     .row {
@@ -41,6 +64,60 @@
 
 
 
+    .dayheader {
+        margin-right: 0;
+        position: sticky;
+    }
 
+    #notepages {
+        padding-right: 0px;
+
+        overflow-y: visible;
+    }
+
+
+    #backtocal {
+        display: block;
+
+        position: fixed;
+
+        bottom: 0px;
+        left: 0px;
+    }
+
+
+
+
+
+}
+
+
+@media (min-width: 992px) {
+
+    #sticky-sidebar {
+        flex-basis: 20%;
+        display: block !important;
+    }
+
+    #main {
+        flex-basis: 80%;
+        display: block !important;
+    }
+
+
+
+    .row {
+        justify-content: space-evenly;
+    }
+
+    /* Can't use height to set summernote height. Must be called when launching summernote instance. */
+    /* #summernote {
+        height: 500;
+    } */
+
+
+    #backtocal {
+        display: none;
+    }
 
 }
