@@ -672,123 +672,394 @@
             <div class="col-8" id="main">
                 <!-- <h1>Main Area</h1> -->
 
+                <div id="mainnoteview">
 
-                <!-- Note Day Header -->
-                <div class="dayheader">
-                    <h1>24 Feb, 2020</h1>
-                    <button class="btn btn-primary" id="newnotebutton" onclick="newNote()">Add note</button>
+
+                    <!-- Note Day Header -->
+                    <div class="dayheader">
+                        <!-- <h1>24 Feb, 2020</h1> -->
+                        <h1 id="headerdate">%date%</h1>
+                        <button class="btn btn-primary addnotebutton" onclick="addNote(this)">Add note</button>
+
+                    </div>
+
+                    
 
                 </div>
-
-
 
                 <!-- Note area -->
                 <!-- <div class="note">testing my note.</div> -->
 
 
                 <div id="notepages">
-                    <div class="notepage visible" id="note1">
+                    <div class="notepage hidden" id="notepage1">
                         <div class="note">testing my note.</div>
                     </div>
-                    <div class="notepage" id="note2"></div>
-                    <div class="notepage" id="note3"></div>
-                    <div class="notepage" id="note4"></div>
-                    <div class="notepage" id="note5"></div>
-                    <div class="notepage" id="note6"></div>
-                    <div class="notepage" id="note7"></div>
-                    <div class="notepage" id="note8"></div>
-                    <div class="notepage" id="note9"></div>
-                    <div class="notepage" id="note10"></div>
-                    <div class="notepage" id="note11"></div>
-                    <div class="notepage" id="note12"></div>
-                    <div class="notepage" id="note13"></div>
-                    <div class="notepage" id="note14"></div>
-                    <div class="notepage" id="note15"></div>
-                    <div class="notepage" id="note16"></div>
-                    <div class="notepage" id="note17"></div>
-                    <div class="notepage" id="note18"></div>
-                    <div class="notepage" id="note19"></div>
-                    <div class="notepage" id="note20"></div>
-                    <div class="notepage" id="note21"></div>
-                    <div class="notepage" id="note22"></div>
-                    <div class="notepage" id="note23"></div>
-                    <div class="notepage" id="note24"></div>
-                    <div class="notepage" id="note25"></div>
-                    <div class="notepage" id="note26"></div>
-                    <div class="notepage" id="note27"></div>
-                    <div class="notepage" id="note28"></div>
-                    <div class="notepage" id="note29"></div>
-                    <div class="notepage" id="note30"></div>
-                    <div class="notepage" id="note31"></div>
-                    <div class="notepage" id="note32"></div>
-                    <div class="notepage" id="note33"></div>
-                    <div class="notepage" id="note34"></div>
-                    <div class="notepage" id="note35"></div>
-                    <div class="notepage" id="note36"></div>
-                    <div class="notepage" id="note37"></div>
-                    <div class="notepage" id="note38"></div>
-                    <div class="notepage" id="note39"></div>
-                    <div class="notepage" id="note40"></div>
-                    <div class="notepage" id="note41"></div>
-                    <div class="notepage" id="note42"></div>
-                    <div class="notepage" id="note43"></div>
-                    <div class="notepage" id="note44"></div>
-                    <div class="notepage" id="note45"></div>
-                    <div class="notepage" id="note46"></div>
-                    <div class="notepage" id="note47"></div>
-                    <div class="notepage" id="note48"></div>
-                    <div class="notepage" id="note49"></div>
-                    <div class="notepage" id="note50"></div>
-                    <div class="notepage" id="note51"></div>
-                    <div class="notepage" id="note52"></div>
-                    <div class="notepage" id="note53"></div>
-                    <div class="notepage" id="note54"></div>
-                    <div class="notepage" id="note55"></div>
-                    <div class="notepage" id="note56"></div>
-                    <div class="notepage" id="note57"></div>
-                    <div class="notepage" id="note58"></div>
-                    <div class="notepage" id="note59"></div>
-                    <div class="notepage" id="note60"></div>
-                    <div class="notepage" id="note61"></div>
-                    <div class="notepage" id="note62"></div>
-                    <div class="notepage" id="note63"></div>
-                    <div class="notepage" id="note64"></div>
-                    <div class="notepage" id="note65"></div>
-                    <div class="notepage" id="note66"></div>
-                    <div class="notepage" id="note67"></div>
-                    <div class="notepage" id="note68"></div>
-                    <div class="notepage" id="note69"></div>
-                    <div class="notepage" id="note70"></div>
-                    <div class="notepage" id="note71"></div>
-                    <div class="notepage" id="note72"></div>
-                    <div class="notepage" id="note73"></div>
-                    <div class="notepage" id="note74"></div>
-                    <div class="notepage" id="note75"></div>
-                    <div class="notepage" id="note76"></div>
-                    <div class="notepage" id="note77"></div>
-                    <div class="notepage" id="note78"></div>
-                    <div class="notepage" id="note79"></div>
-                    <div class="notepage" id="note80"></div>
-                    <div class="notepage" id="note81"></div>
-                    <div class="notepage" id="note82"></div>
-                    <div class="notepage" id="note83"></div>
-                    <div class="notepage" id="note84"></div>
-                    <div class="notepage" id="note85"></div>
-                    <div class="notepage" id="note86"></div>
-                    <div class="notepage" id="note87"></div>
-                    <div class="notepage" id="note88"></div>
-                    <div class="notepage" id="note89"></div>
-                    <div class="notepage" id="note90"></div>
-                    <div class="notepage" id="note91"></div>
-                    <div class="notepage" id="note92"></div>
-                    <div class="notepage" id="note93"></div>
-                    <div class="notepage" id="note94"></div>
-                    <div class="notepage" id="note95"></div>
-                    <div class="notepage" id="note96"></div>
-                    <div class="notepage" id="note97"></div>
-                    <div class="notepage" id="note98"></div>
-                    <div class="notepage" id="note99"></div>
-                    <div class="notepage" id="note100"></div>
+                    <div class="notepage hidden" id="notepage2"></div>
+                    <div class="notepage hidden" id="notepage3"></div>
+                    <div class="notepage hidden" id="notepage4"></div>
+                    <div class="notepage hidden" id="notepage5"></div>
+                    <div class="notepage hidden" id="notepage6"></div>
+                    <div class="notepage hidden" id="notepage7"></div>
+                    <div class="notepage hidden" id="notepage8"></div>
+                    <div class="notepage hidden" id="notepage9"></div>
+                    <div class="notepage hidden" id="notepage10"></div>
+                    <div class="notepage hidden" id="notepage11"></div>
+                    <div class="notepage hidden" id="notepage12"></div>
+                    <div class="notepage hidden" id="notepage13"></div>
+                    <div class="notepage hidden" id="notepage14"></div>
+                    <div class="notepage hidden" id="notepage15"></div>
+                    <div class="notepage hidden" id="notepage16"></div>
+                    <div class="notepage hidden" id="notepage17"></div>
+                    <div class="notepage hidden" id="notepage18"></div>
+                    <div class="notepage hidden" id="notepage19"></div>
+                    <div class="notepage hidden" id="notepage20"></div>
+                    <div class="notepage hidden" id="notepage21"></div>
+                    <div class="notepage hidden" id="notepage22"></div>
+                    <div class="notepage hidden" id="notepage23"></div>
+                    <div class="notepage hidden" id="notepage24"></div>
+                    <div class="notepage hidden" id="notepage25"></div>
+                    <div class="notepage hidden" id="notepage26"></div>
+                    <div class="notepage hidden" id="notepage27"></div>
+                    <div class="notepage hidden" id="notepage28"></div>
+                    <div class="notepage hidden" id="notepage29"></div>
+                    <div class="notepage hidden" id="notepage30"></div>
+                    <div class="notepage hidden" id="notepage31"></div>
+                    <div class="notepage hidden" id="notepage32"></div>
+                    <div class="notepage hidden" id="notepage33"></div>
+                    <div class="notepage hidden" id="notepage34"></div>
+                    <div class="notepage hidden" id="notepage35"></div>
+                    <div class="notepage hidden" id="notepage36"></div>
+                    <div class="notepage hidden" id="notepage37"></div>
+                    <div class="notepage hidden" id="notepage38"></div>
+                    <div class="notepage hidden" id="notepage39"></div>
+                    <div class="notepage hidden" id="notepage40"></div>
+                    <div class="notepage hidden" id="notepage41"></div>
+                    <div class="notepage hidden" id="notepage42"></div>
+                    <div class="notepage hidden" id="notepage43"></div>
+                    <div class="notepage hidden" id="notepage44"></div>
+                    <div class="notepage hidden" id="notepage45"></div>
+                    <div class="notepage hidden" id="notepage46"></div>
+                    <div class="notepage hidden" id="notepage47"></div>
+                    <div class="notepage hidden" id="notepage48"></div>
+                    <div class="notepage hidden" id="notepage49"></div>
+                    <div class="notepage hidden" id="notepage50"></div>
+                    <div class="notepage hidden" id="notepage51"></div>
+                    <div class="notepage hidden" id="notepage52"></div>
+                    <div class="notepage hidden" id="notepage53"></div>
+                    <div class="notepage hidden" id="notepage54"></div>
+                    <div class="notepage hidden" id="notepage55"></div>
+                    <div class="notepage hidden" id="notepage56"></div>
+                    <div class="notepage hidden" id="notepage57"></div>
+                    <div class="notepage hidden" id="notepage58"></div>
+                    <div class="notepage hidden" id="notepage59"></div>
+                    <div class="notepage hidden" id="notepage60"></div>
+                    <div class="notepage hidden" id="notepage61"></div>
+                    <div class="notepage hidden" id="notepage62"></div>
+                    <div class="notepage hidden" id="notepage63"></div>
+                    <div class="notepage hidden" id="notepage64"></div>
+                    <div class="notepage hidden" id="notepage65"></div>
+                    <div class="notepage hidden" id="notepage66"></div>
+                    <div class="notepage hidden" id="notepage67"></div>
+                    <div class="notepage hidden" id="notepage68"></div>
+                    <div class="notepage hidden" id="notepage69"></div>
+                    <div class="notepage hidden" id="notepage70"></div>
+                    <div class="notepage hidden" id="notepage71"></div>
+                    <div class="notepage hidden" id="notepage72"></div>
+                    <div class="notepage hidden" id="notepage73"></div>
+                    <div class="notepage hidden" id="notepage74"></div>
+                    <div class="notepage hidden" id="notepage75"></div>
+                    <div class="notepage hidden" id="notepage76"></div>
+                    <div class="notepage hidden" id="notepage77"></div>
+                    <div class="notepage hidden" id="notepage78"></div>
+                    <div class="notepage hidden" id="notepage79"></div>
+                    <div class="notepage hidden" id="notepage80"></div>
+                    <div class="notepage hidden" id="notepage81"></div>
+                    <div class="notepage hidden" id="notepage82"></div>
+                    <div class="notepage hidden" id="notepage83"></div>
+                    <div class="notepage hidden" id="notepage84"></div>
+                    <div class="notepage hidden" id="notepage85"></div>
+                    <div class="notepage hidden" id="notepage86"></div>
+                    <div class="notepage hidden" id="notepage87"></div>
+                    <div class="notepage hidden" id="notepage88"></div>
+                    <div class="notepage hidden" id="notepage89"></div>
+                    <div class="notepage hidden" id="notepage90"></div>
+                    <div class="notepage hidden" id="notepage91"></div>
+                    <div class="notepage hidden" id="notepage92"></div>
+                    <div class="notepage hidden" id="notepage93"></div>
+                    <div class="notepage hidden" id="notepage94"></div>
+                    <div class="notepage hidden" id="notepage95"></div>
+                    <div class="notepage hidden" id="notepage96"></div>
+                    <div class="notepage hidden" id="notepage97"></div>
+                    <div class="notepage hidden" id="notepage98"></div>
+                    <div class="notepage hidden" id="notepage99"></div>
+                    <div class="notepage hidden" id="notepage100"></div>
+                    <div class="notepage hidden" id="notepage101"></div>
+                    <div class="notepage hidden" id="notepage102"></div>
+                    <div class="notepage hidden" id="notepage103"></div>
+                    <div class="notepage hidden" id="notepage104"></div>
+                    <div class="notepage hidden" id="notepage105"></div>
+                    <div class="notepage hidden" id="notepage106"></div>
+                    <div class="notepage hidden" id="notepage107"></div>
+                    <div class="notepage hidden" id="notepage108"></div>
+                    <div class="notepage hidden" id="notepage109"></div>
+                    <div class="notepage hidden" id="notepage110"></div>
+                    <div class="notepage hidden" id="notepage111"></div>
+                    <div class="notepage hidden" id="notepage112"></div>
+                    <div class="notepage hidden" id="notepage113"></div>
+                    <div class="notepage hidden" id="notepage114"></div>
+                    <div class="notepage hidden" id="notepage115"></div>
+                    <div class="notepage hidden" id="notepage116"></div>
+                    <div class="notepage hidden" id="notepage117"></div>
+                    <div class="notepage hidden" id="notepage118"></div>
+                    <div class="notepage hidden" id="notepage119"></div>
+                    <div class="notepage hidden" id="notepage120"></div>
+                    <div class="notepage hidden" id="notepage121"></div>
+                    <div class="notepage hidden" id="notepage122"></div>
+                    <div class="notepage hidden" id="notepage123"></div>
+                    <div class="notepage hidden" id="notepage124"></div>
+                    <div class="notepage hidden" id="notepage125"></div>
+                    <div class="notepage hidden" id="notepage126"></div>
+                    <div class="notepage hidden" id="notepage127"></div>
+                    <div class="notepage hidden" id="notepage128"></div>
+                    <div class="notepage hidden" id="notepage129"></div>
+                    <div class="notepage hidden" id="notepage130"></div>
+                    <div class="notepage hidden" id="notepage131"></div>
+                    <div class="notepage hidden" id="notepage132"></div>
+                    <div class="notepage hidden" id="notepage133"></div>
+                    <div class="notepage hidden" id="notepage134"></div>
+                    <div class="notepage hidden" id="notepage135"></div>
+                    <div class="notepage hidden" id="notepage136"></div>
+                    <div class="notepage hidden" id="notepage137"></div>
+                    <div class="notepage hidden" id="notepage138"></div>
+                    <div class="notepage hidden" id="notepage139"></div>
+                    <div class="notepage hidden" id="notepage140"></div>
+                    <div class="notepage hidden" id="notepage141"></div>
+                    <div class="notepage hidden" id="notepage142"></div>
+                    <div class="notepage hidden" id="notepage143"></div>
+                    <div class="notepage hidden" id="notepage144"></div>
+                    <div class="notepage hidden" id="notepage145"></div>
+                    <div class="notepage hidden" id="notepage146"></div>
+                    <div class="notepage hidden" id="notepage147"></div>
+                    <div class="notepage hidden" id="notepage148"></div>
+                    <div class="notepage hidden" id="notepage149"></div>
+                    <div class="notepage hidden" id="notepage150"></div>
+                    <div class="notepage hidden" id="notepage151"></div>
+                    <div class="notepage hidden" id="notepage152"></div>
+                    <div class="notepage hidden" id="notepage153"></div>
+                    <div class="notepage hidden" id="notepage154"></div>
+                    <div class="notepage hidden" id="notepage155"></div>
+                    <div class="notepage hidden" id="notepage156"></div>
+                    <div class="notepage hidden" id="notepage157"></div>
+                    <div class="notepage hidden" id="notepage158"></div>
+                    <div class="notepage hidden" id="notepage159"></div>
+                    <div class="notepage hidden" id="notepage160"></div>
+                    <div class="notepage hidden" id="notepage161"></div>
+                    <div class="notepage hidden" id="notepage162"></div>
+                    <div class="notepage hidden" id="notepage163"></div>
+                    <div class="notepage hidden" id="notepage164"></div>
+                    <div class="notepage hidden" id="notepage165"></div>
+                    <div class="notepage hidden" id="notepage166"></div>
+                    <div class="notepage hidden" id="notepage167"></div>
+                    <div class="notepage hidden" id="notepage168"></div>
+                    <div class="notepage hidden" id="notepage169"></div>
+                    <div class="notepage hidden" id="notepage170"></div>
+                    <div class="notepage hidden" id="notepage171"></div>
+                    <div class="notepage hidden" id="notepage172"></div>
+                    <div class="notepage hidden" id="notepage173"></div>
+                    <div class="notepage hidden" id="notepage174"></div>
+                    <div class="notepage hidden" id="notepage175"></div>
+                    <div class="notepage hidden" id="notepage176"></div>
+                    <div class="notepage hidden" id="notepage177"></div>
+                    <div class="notepage hidden" id="notepage178"></div>
+                    <div class="notepage hidden" id="notepage179"></div>
+                    <div class="notepage hidden" id="notepage180"></div>
+                    <div class="notepage hidden" id="notepage181"></div>
+                    <div class="notepage hidden" id="notepage182"></div>
+                    <div class="notepage hidden" id="notepage183"></div>
+                    <div class="notepage hidden" id="notepage184"></div>
+                    <div class="notepage hidden" id="notepage185"></div>
+                    <div class="notepage hidden" id="notepage186"></div>
+                    <div class="notepage hidden" id="notepage187"></div>
+                    <div class="notepage hidden" id="notepage188"></div>
+                    <div class="notepage hidden" id="notepage189"></div>
+                    <div class="notepage hidden" id="notepage190"></div>
+                    <div class="notepage hidden" id="notepage191"></div>
+                    <div class="notepage hidden" id="notepage192"></div>
+                    <div class="notepage hidden" id="notepage193"></div>
+                    <div class="notepage hidden" id="notepage194"></div>
+                    <div class="notepage hidden" id="notepage195"></div>
+                    <div class="notepage hidden" id="notepage196"></div>
+                    <div class="notepage hidden" id="notepage197"></div>
+                    <div class="notepage hidden" id="notepage198"></div>
+                    <div class="notepage hidden" id="notepage199"></div>
+                    <div class="notepage hidden" id="notepage200"></div>
+                    <div class="notepage hidden" id="notepage201"></div>
+                    <div class="notepage hidden" id="notepage202"></div>
+                    <div class="notepage hidden" id="notepage203"></div>
+                    <div class="notepage hidden" id="notepage204"></div>
+                    <div class="notepage hidden" id="notepage205"></div>
+                    <div class="notepage hidden" id="notepage206"></div>
+                    <div class="notepage hidden" id="notepage207"></div>
+                    <div class="notepage hidden" id="notepage208"></div>
+                    <div class="notepage hidden" id="notepage209"></div>
+                    <div class="notepage hidden" id="notepage210"></div>
+                    <div class="notepage hidden" id="notepage211"></div>
+                    <div class="notepage hidden" id="notepage212"></div>
+                    <div class="notepage hidden" id="notepage213"></div>
+                    <div class="notepage hidden" id="notepage214"></div>
+                    <div class="notepage hidden" id="notepage215"></div>
+                    <div class="notepage hidden" id="notepage216"></div>
+                    <div class="notepage hidden" id="notepage217"></div>
+                    <div class="notepage hidden" id="notepage218"></div>
+                    <div class="notepage hidden" id="notepage219"></div>
+                    <div class="notepage hidden" id="notepage220"></div>
+                    <div class="notepage hidden" id="notepage221"></div>
+                    <div class="notepage hidden" id="notepage222"></div>
+                    <div class="notepage hidden" id="notepage223"></div>
+                    <div class="notepage hidden" id="notepage224"></div>
+                    <div class="notepage hidden" id="notepage225"></div>
+                    <div class="notepage hidden" id="notepage226"></div>
+                    <div class="notepage hidden" id="notepage227"></div>
+                    <div class="notepage hidden" id="notepage228"></div>
+                    <div class="notepage hidden" id="notepage229"></div>
+                    <div class="notepage hidden" id="notepage230"></div>
+                    <div class="notepage hidden" id="notepage231"></div>
+                    <div class="notepage hidden" id="notepage232"></div>
+                    <div class="notepage hidden" id="notepage233"></div>
+                    <div class="notepage hidden" id="notepage234"></div>
+                    <div class="notepage hidden" id="notepage235"></div>
+                    <div class="notepage hidden" id="notepage236"></div>
+                    <div class="notepage hidden" id="notepage237"></div>
+                    <div class="notepage hidden" id="notepage238"></div>
+                    <div class="notepage hidden" id="notepage239"></div>
+                    <div class="notepage hidden" id="notepage240"></div>
+                    <div class="notepage hidden" id="notepage241"></div>
+                    <div class="notepage hidden" id="notepage242"></div>
+                    <div class="notepage hidden" id="notepage243"></div>
+                    <div class="notepage hidden" id="notepage244"></div>
+                    <div class="notepage hidden" id="notepage245"></div>
+                    <div class="notepage hidden" id="notepage246"></div>
+                    <div class="notepage hidden" id="notepage247"></div>
+                    <div class="notepage hidden" id="notepage248"></div>
+                    <div class="notepage hidden" id="notepage249"></div>
+                    <div class="notepage hidden" id="notepage250"></div>
+                    <div class="notepage hidden" id="notepage251"></div>
+                    <div class="notepage hidden" id="notepage252"></div>
+                    <div class="notepage hidden" id="notepage253"></div>
+                    <div class="notepage hidden" id="notepage254"></div>
+                    <div class="notepage hidden" id="notepage255"></div>
+                    <div class="notepage hidden" id="notepage256"></div>
+                    <div class="notepage hidden" id="notepage257"></div>
+                    <div class="notepage hidden" id="notepage258"></div>
+                    <div class="notepage hidden" id="notepage259"></div>
+                    <div class="notepage hidden" id="notepage260"></div>
+                    <div class="notepage hidden" id="notepage261"></div>
+                    <div class="notepage hidden" id="notepage262"></div>
+                    <div class="notepage hidden" id="notepage263"></div>
+                    <div class="notepage hidden" id="notepage264"></div>
+                    <div class="notepage hidden" id="notepage265"></div>
+                    <div class="notepage hidden" id="notepage266"></div>
+                    <div class="notepage hidden" id="notepage267"></div>
+                    <div class="notepage hidden" id="notepage268"></div>
+                    <div class="notepage hidden" id="notepage269"></div>
+                    <div class="notepage hidden" id="notepage270"></div>
+                    <div class="notepage hidden" id="notepage271"></div>
+                    <div class="notepage hidden" id="notepage272"></div>
+                    <div class="notepage hidden" id="notepage273"></div>
+                    <div class="notepage hidden" id="notepage274"></div>
+                    <div class="notepage hidden" id="notepage275"></div>
+                    <div class="notepage hidden" id="notepage276"></div>
+                    <div class="notepage hidden" id="notepage277"></div>
+                    <div class="notepage hidden" id="notepage278"></div>
+                    <div class="notepage hidden" id="notepage279"></div>
+                    <div class="notepage hidden" id="notepage280"></div>
+                    <div class="notepage hidden" id="notepage281"></div>
+                    <div class="notepage hidden" id="notepage282"></div>
+                    <div class="notepage hidden" id="notepage283"></div>
+                    <div class="notepage hidden" id="notepage284"></div>
+                    <div class="notepage hidden" id="notepage285"></div>
+                    <div class="notepage hidden" id="notepage286"></div>
+                    <div class="notepage hidden" id="notepage287"></div>
+                    <div class="notepage hidden" id="notepage288"></div>
+                    <div class="notepage hidden" id="notepage289"></div>
+                    <div class="notepage hidden" id="notepage290"></div>
+                    <div class="notepage hidden" id="notepage291"></div>
+                    <div class="notepage hidden" id="notepage292"></div>
+                    <div class="notepage hidden" id="notepage293"></div>
+                    <div class="notepage hidden" id="notepage294"></div>
+                    <div class="notepage hidden" id="notepage295"></div>
+                    <div class="notepage hidden" id="notepage296"></div>
+                    <div class="notepage hidden" id="notepage297"></div>
+                    <div class="notepage hidden" id="notepage298"></div>
+                    <div class="notepage hidden" id="notepage299"></div>
+                    <div class="notepage hidden" id="notepage300"></div>
+                    <div class="notepage hidden" id="notepage301"></div>
+                    <div class="notepage hidden" id="notepage302"></div>
+                    <div class="notepage hidden" id="notepage303"></div>
+                    <div class="notepage hidden" id="notepage304"></div>
+                    <div class="notepage hidden" id="notepage305"></div>
+                    <div class="notepage hidden" id="notepage306"></div>
+                    <div class="notepage hidden" id="notepage307"></div>
+                    <div class="notepage hidden" id="notepage308"></div>
+                    <div class="notepage hidden" id="notepage309"></div>
+                    <div class="notepage hidden" id="notepage310"></div>
+                    <div class="notepage hidden" id="notepage311"></div>
+                    <div class="notepage hidden" id="notepage312"></div>
+                    <div class="notepage hidden" id="notepage313"></div>
+                    <div class="notepage hidden" id="notepage314"></div>
+                    <div class="notepage hidden" id="notepage315"></div>
+                    <div class="notepage hidden" id="notepage316"></div>
+                    <div class="notepage hidden" id="notepage317"></div>
+                    <div class="notepage hidden" id="notepage318"></div>
+                    <div class="notepage hidden" id="notepage319"></div>
+                    <div class="notepage hidden" id="notepage320"></div>
+                    <div class="notepage hidden" id="notepage321"></div>
+                    <div class="notepage hidden" id="notepage322"></div>
+                    <div class="notepage hidden" id="notepage323"></div>
+                    <div class="notepage hidden" id="notepage324"></div>
+                    <div class="notepage hidden" id="notepage325"></div>
+                    <div class="notepage hidden" id="notepage326"></div>
+                    <div class="notepage hidden" id="notepage327"></div>
+                    <div class="notepage hidden" id="notepage328"></div>
+                    <div class="notepage hidden" id="notepage329"></div>
+                    <div class="notepage hidden" id="notepage330"></div>
+                    <div class="notepage hidden" id="notepage331"></div>
+                    <div class="notepage hidden" id="notepage332"></div>
+                    <div class="notepage hidden" id="notepage333"></div>
+                    <div class="notepage hidden" id="notepage334"></div>
+                    <div class="notepage hidden" id="notepage335"></div>
+                    <div class="notepage hidden" id="notepage336"></div>
+                    <div class="notepage hidden" id="notepage337"></div>
+                    <div class="notepage hidden" id="notepage338"></div>
+                    <div class="notepage hidden" id="notepage339"></div>
+                    <div class="notepage hidden" id="notepage340"></div>
+                    <div class="notepage hidden" id="notepage341"></div>
+                    <div class="notepage hidden" id="notepage342"></div>
+                    <div class="notepage hidden" id="notepage343"></div>
+                    <div class="notepage hidden" id="notepage344"></div>
+                    <div class="notepage hidden" id="notepage345"></div>
+                    <div class="notepage hidden" id="notepage346"></div>
+                    <div class="notepage hidden" id="notepage347"></div>
+                    <div class="notepage hidden" id="notepage348"></div>
+                    <div class="notepage hidden" id="notepage349"></div>
+                    <div class="notepage hidden" id="notepage350"></div>
+                    <div class="notepage hidden" id="notepage351"></div>
+                    <div class="notepage hidden" id="notepage352"></div>
+                    <div class="notepage hidden" id="notepage353"></div>
+                    <div class="notepage hidden" id="notepage354"></div>
+                    <div class="notepage hidden" id="notepage355"></div>
+                    <div class="notepage hidden" id="notepage356"></div>
+                    <div class="notepage hidden" id="notepage357"></div>
+                    <div class="notepage hidden" id="notepage358"></div>
+                    <div class="notepage hidden" id="notepage359"></div>
+                    <div class="notepage hidden" id="notepage360"></div>
+                    <div class="notepage hidden" id="notepage361"></div>
+                    <div class="notepage hidden" id="notepage362"></div>
+                    <div class="notepage hidden" id="notepage363"></div>
+                    <div class="notepage hidden" id="notepage364"></div>
+                    <div class="notepage hidden" id="notepage365"></div>
+                    <div class="notepage hidden" id="notepage366"></div>
 
                 </div>
 

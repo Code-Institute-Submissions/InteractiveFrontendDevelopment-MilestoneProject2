@@ -78,13 +78,13 @@
 
 /* Note pages. */
 
-.notepage {
+.hidden {
     display: none;
 }
 
-.visible {
+/* .visible {
     display: block;
-}
+} */
 
 .note {
     border: 1px solid lightslategray;
@@ -99,7 +99,15 @@
 .dayheader {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 30px;
+    /* border: 2px solid; */
+
+}
+
+#headerdate {
+    padding: 0px;
+    margin: 0px;
 }
 
 
