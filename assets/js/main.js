@@ -396,7 +396,7 @@ function addClickHandlerToNotes() {
 
   var notelist = document.querySelectorAll('.note');
   for (var i = 0; i < notelist.length; i++) {
-    notelist[i].addEventListener('click', function (event) { editNote(this) }, false);
+    notelist[i].addEventListener('click', function (event) { editNote(this) }, false, {once : true});
   }
 
 
