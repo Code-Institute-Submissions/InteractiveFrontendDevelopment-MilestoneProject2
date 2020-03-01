@@ -29,6 +29,12 @@
 
 
 
+    .py-3 {
+        padding-top: 3px !important;
+    }
+
+
+
     #main {
         display: none;
 
@@ -81,7 +87,7 @@
 
         position: fixed;
 
-        bottom: 0px;
+        bottom: 70px;
         left: 0px;
     }
 

@@ -17,7 +17,7 @@
     <link href="assets/js/summernote-0.8.16-dist/summernote-bs4.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="assets/js/summernote-0.8.16-dist/summernote-bs4.min.js" crossorigin="anonymous"></script>
 
-    
+
 
 
 
@@ -52,10 +52,10 @@
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li> -->
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            </form> -->
         </div>
     </nav>
 
@@ -683,8 +683,8 @@
 
                         <h1 id="headerdate"></h1>
 
-                        
-                        <button class="btn btn-success addnotebutton" onclick="addNote(this)">Add note</button>
+
+                        <button class="btn btn-success addnotebutton" onclick="addNote(this)"><ion-icon name="brush-sharp"></ion-icon> Add note</button>
 
 
 
@@ -1078,7 +1078,10 @@
 
                 </div>
 
-                <button class="btn btn-primary" id="backtocal" onclick="backToCalendar()"><- Cal</button>
+                <button class="btn btn-outline-primary btn-lg" id="backtocal" onclick="backToCalendar()">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                </button>
+
 
 
 
@@ -1105,6 +1108,10 @@
     <script src="assets/js/formatteddates.js"></script>
 
     <script src="assets/js/main.js"></script>
+
+
+    <!-- Load Ionicons icons -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
     <!-- <script>
         $('#summernote').summernote({

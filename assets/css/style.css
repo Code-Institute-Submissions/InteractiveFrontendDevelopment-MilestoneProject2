@@ -2,6 +2,14 @@
     color: aquamarine;
 } */
 
+/* Main content container - calender and note view */
+
+.py-3 {
+    padding-top: 10px !important;
+}
+
+
+
 
 /* SIDEVIEW: Calendar view */
 
@@ -40,7 +48,7 @@
     display: grid;
     grid-template: auto auto auto auto auto auto / auto auto auto auto auto auto auto;
 
-    grid-gap:5px;
+    grid-gap: 5px;
 
 
 
@@ -61,7 +69,7 @@
 }
 
 .date:hover {
-    border: 3px solid salmon;
+    border: 3px solid rgb(70, 228, 107);
     border-radius: 5px;
 }
 
@@ -96,12 +104,30 @@
 
 
 
-/* summer note */
-.editorbuttongroup {
-    /* padding-right: 55px; */
+/* Editor buttons */
+#addnotebuttongroup {
+    display: flex;
+    justify-content: right;
+    flex-wrap: nowrap;
+}
+
+#editorbuttongroup {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+
+.deletebuttongroup {
+    display: flex;
+    justify-content: left;
+}
+
+.savecancelbuttongroup {
     display: flex;
     justify-content: right;
 }
+
 
 
 
@@ -152,9 +178,17 @@ body {
     margin: 0px;
 }
 
-.addnotebutton {
-    /* margin-right: 55px; */
+
+/* Buttons */
+
+.deletenotebutton {
+    margin-right: 10px;
 }
 
+.cancelnotebutton {
+    margin-right: 10px;
+}
 
-/* Note editor */
+button {
+    margin-top: 5px;
+}
