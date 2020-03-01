@@ -29,7 +29,13 @@ function viewNotepage(x) {
   // get id of the clicked date
   let clickeddateid = x.id;
 
-  console.log(clickeddateid);
+
+  // close any open rich text editor instances.
+  // make the editor invisible
+  $('#summernote').summernote('reset');
+  $('#summernote').summernote('destroy');
+  // remove the 'Save' and 'cancel' buttons.
+  $('.editorbuttongroup').remove();
 
 
   // create a HTML collection of note pages.
@@ -208,7 +214,10 @@ function addNote(x) {
         ['para', ['ul', 'ol', 'paragraph']],
         ['view', ['fullscreen']],
       ]
-    })
+    });
+
+    $('#summernote').summernote('focus');
+
 
   }
   else {
@@ -218,16 +227,21 @@ function addNote(x) {
       tabsize: 2,
       height: 400
     })
+
+    $('#summernote').summernote('focus');
+
   }
 
 
 
 
 
-  // Create a corresponding id for the Save button.
+  // Create id's for the buttons corresponding to the notepage paramenter x.
   let currentID = x.id;
+  let currentnotepageID = currentID.replace("addnote", "")
+  console.log(currentID);
 
-  let currentsavebutton = '<div class="editorbuttongroup"><button type="button" class="btn btn-primary savenotebutton" id="' + 'save' + currentID + '" onclick="saveNote(this)">Save</button><button type="button" class="btn btn-warning cancelnotebutton" id="' + 'cancel' + currentID + '" onclick="cancelNote(this)">Cancel</button></div>'
+  let currentsavebutton = '<div class="editorbuttongroup"><button type="button" class="btn btn-primary savenotebutton" id="' + 'save' + currentID + '" onclick="saveNote(this)">Save</button><button type="button" class="btn btn-warning cancelnotebutton" id="' + 'cancel' + currentnotepageID + '" onclick="cancelNote(this)">Cancel</button></div>'
 
   // append the Save button and the Cancel button
   $('#note-editor').append(currentsavebutton);
@@ -244,7 +258,9 @@ function addNote(x) {
 function cancelNote(x) {
 
   // select the correct notepage
-  var notepageidentifier = x.id.replace('canceladdnote', '#notepage');
+  var notepageidentifier = x.id.replace('cancel', '#notepage');
+
+  console.log(notepageidentifier);
 
   // make the editor invisible
   $('#summernote').summernote('reset');
@@ -329,6 +345,7 @@ function saveNote(x) {
   $(notepageidentifier).append(savedNote);
 
 
+  // add an event handler to the new note.
   addClickHandlerToNotes()
 
 
@@ -376,42 +393,11 @@ function saveNote(x) {
 
 function addClickHandlerToNotes() {
 
-  // var notes = document.getElementsByClassName("note");
 
-  // for (var i = 0; i < notes.length; i++) {
-  //   var note = notes[i];
-  //   note.addEventListener('click', function (event) {
-  //     openNoteEditDeletePage(note)
-  //   });
-
-  // }
-
-  // $("#notepages").on('click', function (event) {
-
-  //   // check if clicked item is of class = 'note'
-  //   if (event.classList.contains("note")) {
-  //     openNoteEditDeletePage(event.target);
-  //   }
-
-  // });
-
-
-  // document.getElementById('notepages').addEventListener('click', function (event) {
-  //   // func(event.target);
-  //   openNoteEditDeletePage(this);
-  // }, false);
-
-//   $('.note').on('click', function(e) {
-//     if (e.target !== this) return;
- 
-//      console.log( 'clicked the foobar' );
-//  });
-  
-
-var notelist =document.querySelectorAll('.note');
-for(var i=0;i<notelist.length;i++){
-  notelist[i].addEventListener('click',function(event){editNote(this)},false);
-}
+  var notelist = document.querySelectorAll('.note');
+  for (var i = 0; i < notelist.length; i++) {
+    notelist[i].addEventListener('click', function (event) { editNote(this) }, false);
+  }
 
 
 
@@ -421,9 +407,10 @@ for(var i=0;i<notelist.length;i++){
 
 function editNote(note) {
 
-  console.log(note);
 
-    // Add a note to the currently open 'notepage'.
+  // retrieve the text of the note.
+  let notecontent = note.innerHTML;
+  // console.log(notecontent)
 
 
   // hide the 'back to calendar button' if in mobile view:
@@ -431,7 +418,7 @@ function editNote(note) {
 
 
 
-  // make All the current notepage hidden.
+  // make All the current notepages hidden.
   var notes = document.getElementsByClassName('notepage');
 
   // make all notepages hidden.
@@ -444,6 +431,8 @@ function editNote(note) {
 
 
   // launch the editor at correct height and with appropriate toolbar for responsive display:
+  // load the original note text into the editor:
+  // $('#summernote').summernote('code', markupStr);
   if (window.matchMedia('screen and (max-width: 991px)').matches) {
 
     $('#summernote').summernote({
@@ -456,8 +445,11 @@ function editNote(note) {
         ['color', ['color']],
         ['para', ['ul', 'ol', 'paragraph']],
         ['view', ['fullscreen']],
-      ]
-    })
+      ],
+    });
+
+    $('#summernote').summernote('code', notecontent);
+    $('#summernote').summernote('focus');
 
   }
   else {
@@ -466,17 +458,27 @@ function editNote(note) {
       placeholder: 'Add new note',
       tabsize: 2,
       height: 400
-    })
+    });
+
+    $('#summernote').summernote('code', notecontent);
+    $('#summernote').summernote('focus');
   }
 
 
 
 
 
-  // Create a corresponding id for the Save button.
-  let currentID = note.id;
+  // Create a corresponding id for each of the buttons.
+  let currentNoteID = note.id;
+  let currentNoteIDInt = currentNoteID.replace("note", "")
+  let currentNotepageID = note.parentElement.id;
+  let currentNotepageIDInt = currentNotepageID.replace("notepage", "")
 
-  let fulleditbuttons = '<div class="editorbuttongroup"><button type="button" class="btn btn-primary savenotebutton" id="' + 'save' + currentID + '" onclick="saveNote(this)">Save Edit</button><button type="button" class="btn btn-danger deletenotebutton" id="' + 'delete' + currentID + '" onclick="deleteNote(this)">Delete</button><button type="button" class="btn btn-light cancelnotebutton" id="' + 'cancel' + currentID + '" onclick="cancelNote(this)">Cancel</button></div>'
+  // create an id in the form of e.g. 60-3 ;
+  let combinationID = currentNotepageID + "-" + currentNoteID;
+
+  // create a button group for the relevant note:
+  let fulleditbuttons = '<div class="editorbuttongroup"><button type="button" class="btn btn-primary savenotebutton" id="' + 'save-edit' + currentNoteID + '" onclick="saveEditedNote(this)">Save Edit</button><button type="button" class="btn btn-danger deletenotebutton" id="' + 'delete' + currentNoteID + '" onclick="deleteNote(this)">Delete</button><button type="button" class="btn btn-secondary cancelnotebutton" id="' + 'cancel' + currentNotepageIDInt + '" onclick="cancelNote(this)">Cancel</button></div>'
 
   // append the Save, Delete and the Cancel buttons
   $('#note-editor').append(fulleditbuttons);
@@ -489,6 +491,119 @@ function editNote(note) {
 
 
 }
+
+
+function saveEditedNote(x) {
+  var markupStr = $('#summernote').summernote('code');
+
+
+  // replace the current contents of the relevent note with the new contents.
+  let mysaveeditid = x.id;
+  let mynoteid = mysaveeditid.replace("save-edit", "#");
+  console.log(mynoteid)
+  $(mynoteid).html(markupStr);
+
+
+
+
+  // make the editor invisible
+  $('#summernote').summernote('reset');
+  $('#summernote').summernote('destroy');
+  // remove the 'Save' and 'cancel' buttons.
+  $('.editorbuttongroup').remove();
+
+
+
+  // make the current notepage visible
+  var currentnoteJs = mynoteid.replace("#","");
+  var currentnotepage = document.getElementById(currentnoteJs).parentElement;
+  var currentnotepageid = currentnotepage.id;
+  
+  console.log(currentnotepageid);
+  var notepageidentifier = "#"+currentnotepageid;
+  var thecurrentnotepage = $(notepageidentifier);
+  thecurrentnotepage.removeClass("hidden");
+
+
+  // Unhide the 'Add note' button.
+  $(".addnotebutton").removeClass("hidden");
+
+  // Unhide the 'back to calendar button' if in mobile view:
+  if (window.matchMedia('screen and (max-width: 991px)').matches) {
+
+    $("#backtocal").css({ "display": "block" })
+
+  }
+
+
+
+  // save the updated notepage to localstorage. 
+  // get the innerhtml of the notepage
+  var currentnotepagehtml = thecurrentnotepage.html();
+  localStorage.setItem(notepageidentifier, currentnotepagehtml);
+
+
+}
+
+
+function deleteNote(x) {
+
+  
+
+
+  // find the current notes id.
+  let deletednoteid = x.id;
+  let mynoteid = deletednoteid.replace("delete", "#");
+  console.log(mynoteid);
+  
+// find the current notepages id.
+  var currentnoteJs = mynoteid.replace("#","");
+  var currentnotepage = document.getElementById(currentnoteJs).parentElement;
+  var currentnotepageid = currentnotepage.id;
+  
+  console.log(currentnotepageid);
+
+
+  // remove the relevent note from the notepage
+  $(mynoteid).remove();
+
+
+
+
+  // make the editor invisible
+  $('#summernote').summernote('reset');
+  $('#summernote').summernote('destroy');
+  // remove the 'Save' and 'cancel' buttons.
+  $('.editorbuttongroup').remove();
+
+
+
+  // make the current notepage visible
+  var notepageidentifier = "#"+currentnotepageid;
+  var thecurrentnotepage = $(notepageidentifier);
+  thecurrentnotepage.removeClass("hidden");
+
+
+  // Unhide the 'Add note' button.
+  $(".addnotebutton").removeClass("hidden");
+
+  // Unhide the 'back to calendar button' if in mobile view:
+  if (window.matchMedia('screen and (max-width: 991px)').matches) {
+
+    $("#backtocal").css({ "display": "block" })
+
+  }
+
+
+
+  // store the updated notepage in localstorage. 
+  // get the innerhtml of the notepage
+  var currentnotepagehtml = thecurrentnotepage.html();
+  localStorage.setItem(notepageidentifier, currentnotepagehtml);
+
+
+}
+
 
 
 function retrieveNotepages() {
