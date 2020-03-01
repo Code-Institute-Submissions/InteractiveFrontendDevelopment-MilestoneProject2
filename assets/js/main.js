@@ -216,7 +216,7 @@ function addNote(x) {
     $('#summernote').summernote({
       placeholder: 'Add new note',
       tabsize: 2,
-      height: 500
+      height: 400
     })
   }
 
@@ -465,7 +465,7 @@ function editNote(note) {
     $('#summernote').summernote({
       placeholder: 'Add new note',
       tabsize: 2,
-      height: 500
+      height: 400
     })
   }
 
