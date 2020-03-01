@@ -6,9 +6,10 @@ This is an interactive website that allows the user to add and view daily notes.
 
 ## Demo
 
-<!-- There is a live demo available [here](https://evmcodi.github.io/UserCentricDesignMilestoneProject1/index.html).
+There is a live demo available [here](https://evmcodi.github.io/UserCentricDesignMilestoneProject1/index.html).
 
-![Desktop Demo](desktopdemo.png "Desktop Demo") -->
+![Desktop Demo](/assets/images/dailynotes1.png "Desktop Demo")
+![Desktop Demo](/assets/images/dailynotes2.png "Desktop Demo")
 
 
 
@@ -66,9 +67,46 @@ The top header is sticky on desktop screens and non-sticky on mobile to save mob
 
 A CSS animation has been added to fade in the main content of each page in 400ms and fade in the images in 700ms to add to the feeling of turning a page in a physical book. -->
 
-### Features Left to Implement
+### Features to Implement
 <!-- In the future I would like to add a 'Blog' page so that visitors to the site could keep up to date with news about the subject and the site. -->
 
+
+
+## Testing
+
+### Process
+<!-- The student user story is achieved as the site is easy to navigate and follows logical progression through the pages.
+
+On the Contact page, the form will not submit if you do not input a valid email address, as the form uses html input validation.
+
+All page links have been tested manually in order to ensure that they navigate the user to the intended destination.
+
+After clicking on a link to a new page a CSS animation has been tested to ensure it fades in the main content of the page in 400ms and fades in the images in 700ms.
+
+The site was tested on multiple devices to ensure consistent and working deployment of the UX. These include a Linux desktop with Firefox, a Windows 10 laptop with Chrome, a Sony Xperia with Firefox and a Google Nexus table with Chrome. -->
+
+### Issues Fixed
+
+### Issues to Resolve
+
+
+
+
+## Deployment
+
+DailyNotes is hosted on Github pages. 
+
+It was deployed following the procedure outlined in the [Github Pages documentation](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site).
+
+There was an issue with the relative links of the fonts and the favicon files when the site was uploaded to Github, which resulted in a 404 http error being shown in Firefox Developer Tools for each of these files. 
+
+In order to fix this deployment issue a change in the linking was added with the addition of "../../" before the assets folder link.
+
+### Cloning and editing
+
+This site can be cloned with ```git clone https://github.com/evmcodi/UserCentricDesignMilestoneProject1.git```, or by clicking the 'Download as .zip' button at the top of this repo and the files can be edited directly and viewed in a browser.
+
+## Credits
 
 ## Devlopment tools used
 
@@ -99,38 +137,6 @@ A CSS animation has been added to fade in the main content of each page in 400ms
 
 - Free open sourece tool for wireframing websites. Allows export to html.
 
-
-## Testing
-<!-- The student user story is achieved as the site is easy to navigate and follows logical progression through the pages.
-
-On the Contact page, the form will not submit if you do not input a valid email address, as the form uses html input validation.
-
-All page links have been tested manually in order to ensure that they navigate the user to the intended destination.
-
-After clicking on a link to a new page a CSS animation has been tested to ensure it fades in the main content of the page in 400ms and fades in the images in 700ms.
-
-The site was tested on multiple devices to ensure consistent and working deployment of the UX. These include a Linux desktop with Firefox, a Windows 10 laptop with Chrome, a Sony Xperia with Firefox and a Google Nexus table with Chrome. -->
-
-
-## Deployment
-
-StudyTips is hosted on Github pages. 
-
-It was deployed following the procedure outlined in the [Github Pages documentation](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site).
-
-There was an issue with the relative links of the fonts and the favicon files when the site was uploaded to Github, which resulted in a 404 http error being shown in Firefox Developer Tools for each of these files. 
-
-In order to fix this deployment issue a change in the linking was added with the addition of "../../" before the assets folder link.
-
-### Cloning and editing
-
-This site can be cloned with ```git clone https://github.com/evmcodi/UserCentricDesignMilestoneProject1.git```, or by clicking the 'Download as .zip' button at the top of this repo and the files can be edited directly and viewed in a browser.
-
-## Credits
-
-### Content
-
-All written content in the pages of this site were written by me.
 
 
 ### Media
