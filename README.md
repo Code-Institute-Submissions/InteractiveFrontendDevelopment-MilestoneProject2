@@ -1,12 +1,10 @@
 # DailyNotes web app
 
-<!-- This is an interactive website to help students to make the most of an education course through learning how to learn. It includes an introduction page, a guide on why to study, a guide on how to study, an about page, and a contact form. -->
 
 This is an interactive website that allows the user to add and view daily notes. Each day has it's own page for adding notes, allowing the user to keep a journal, as well and to plan tasks and events for days in the future.
 
-## Demo
 
-There is a live demo available [here](https://evmcodi.github.io/UserCentricDesignMilestoneProject1/index.html).
+There is a live demo available [here](https://evmcodi.github.io/InteractiveFrontendDevelopment-MilestoneProject2/index.html).
 
 ![Desktop Demo](/assets/images/dailynotes1.png "Desktop Demo")
 ![Desktop Demo](/assets/images/dailynotes2.png "Desktop Demo")
@@ -16,148 +14,206 @@ There is a live demo available [here](https://evmcodi.github.io/UserCentricDesig
 ## UX
 
 
-### User Stories
 
-<!-- - As a student, I want to find resources for learning study skills in a clearly laid out guide with some images, so I can obtain this knowledge and apply this information in my courses. -->
+
+### Strategy
+
+The goal for this site is to make it easy and intuitive for users to keep daily notes, daily tasks and future tasks on a cross-platform web app.
+
+#### User Stories
 
 - As a student, I want to keep track of new things I learn each day through writing notes. I also want to be able to plan for assignment deadlines and exam dates set at a future day. I want this to be achieved in an intuitive and simple structure so I don't get confused.
 
 - As a developer, I want to keep a record of tasks that I have completed, as well as new things that I learn each day. I also want to be able to plan milestones for dates in the future so I can provide clients with projects that are on time.
 
-### Strategy
-
-<!-- The goal for the UX design of this site was to make it easy and intuitive for students to view information and advice on any device: a phone, tablet or desktop screen. -->
-
-The goal for the UX design of this site is to make it easy and intuitive for users to keep daily notes, daily tasks and future tasks on a cross-platform web app.
-
 ### Scope
-<!-- I wanted to give students an understanding of why studying is important within an online course, how best to study, and how to be engaged with the site as it would be updated in the future. -->
+
+DailyNotes has a content scope focused on user-generated notes. The user can create notes in rich text (including images and embedded videos).
+
 
 ### Structure
 
-<!-- StudyTips is laid out in a way that steps through the pages linked in the header bar in a chronological way. The landing page is 'Home' where a student can learn about the purpose of the website. 
+The site's content structure contains two main views.
 
-The next page is 'Why study?' to give reasons to the student to work at their course. The 'How to study' page then gives practical hints to the student on ways to improve study.
-Following this there is an about page for a visitor wondering when the page was created and by who. Then for communication links the contact page is the final page in the header.
+- The calendar view.
+- The daily note page view.
 
-On both mobile and desktop there are useful 'page turning' buttons at the bottom of each page, as well as a top navigation bar, that allows for intuitive progress through the site.
-
-I chose to make the site 'mobile-first' and responsive so that page loading would be quicker on less powerful, small devices. -->
+The site is coded to allow the user to select a date from the calendar in order to view, add, edit or delete notes for that day.
 
 
 ### Skeleton
-<!-- There is a wireframe available to view at https://evmcodi.github.io/UserCentricDesignMilestoneProject1/studytips-wireframe.html.  -->
+
+The site's content skeleton includes a scrollable view for the calendar year 2020.
+
+It also includes a scrollable daily note page with an 'Add note' button at the top along with a date header to help users to know what date they are adding the note to, especially on mobile and tablet screens.
+
+There is a wireframe available to view at https://evmcodi.github.io/InteractiveFrontendDevelopment-MilestoneProject2/assets/wireframes/DailyNotes_v1.html. 
+
+
+
 
 ### Surface
 
-<!-- I chose dark blue and grey colour scheme to create a calm but engaging feel. -->
+The colour scheme is a minimalistic so users are comfortable with the site.
+
+The background is white and the notes background is light grey to give some definition to them.
+
+All text is well contrasted with the backgrounds for easier readability.
+
+The green 'Add note' button gives a clear understanding to the user about how to interact with the page initially.
+
+The edit note page's buttons are appropriately coloured and positioned within CSS flexboxes so that a person is less likely to accidentally delete a note, as shown below.
+
+![Desktop Demo](/assets/images/dailynotes3.png "Desktop Demo")
+
+
+
+
 
 ## Technologies Used
 
+Languages:
 - HTML
 - CSS
 - Javascript
 
-<!-- I didn't use a frontend framework for this project. I used one javascript function to enable a dropdown menu. -->
+Libraries:
+- JQuery
+- Bootstrap 4
+- Summernote Rich text editor
+
+
 
 ## Features
-<!-- The site uses page turning navigation bar at the bottom of each page to create the feeling of page turning of a physical book.
 
-The top header is sticky on desktop screens and non-sticky on mobile to save mobile screen space.
+### Features implemented
 
-A CSS animation has been added to fade in the main content of each page in 400ms and fade in the images in 700ms to add to the feeling of turning a page in a physical book. -->
+
+#### Interactive calendar view & day selelctor.
+User can click on a date to view it's corresponding note page.
+
+#### Daily notes view.
+The user can view all rich text notes for the corresponding day in a list view.
+
+#### Note editor.
+The user can Save, Edit or Delete a note in the note editor view.
+
+#### Responsive Design.
+Users on mobile, tablet, laptop and desktop can use all the features of the web app.
+
 
 ### Features to Implement
-<!-- In the future I would like to add a 'Blog' page so that visitors to the site could keep up to date with news about the subject and the site. -->
 
 
+#### A way to assign different tags to notes.
+
+This would allow a user to tag notes with e.g. 
+- a 'task' tag
+- an 'event' tag
+
+#### A way to add recurring tasks/events.
+
+E.g. The user could add an event that happens every two weeks to remind them to call a friend.
+
+#### A search function.
+This would allow a user to search their notes for keywords or tags.
 
 ## Testing
 
 ### Process
-<!-- The student user story is achieved as the site is easy to navigate and follows logical progression through the pages.
 
-On the Contact page, the form will not submit if you do not input a valid email address, as the form uses html input validation.
+The site was tested on multiple devices to ensure consistent and working deployment of the web app. These include a Linux desktop with Firefox, a Windows 10 laptop with Chrome, a Sony Xperia with Firefox and a Google Nexus table with Chrome.
 
-All page links have been tested manually in order to ensure that they navigate the user to the intended destination.
+All buttons and interactive features have been tested manually in order to ensure that they work as expected. 
 
-After clicking on a link to a new page a CSS animation has been tested to ensure it fades in the main content of the page in 400ms and fades in the images in 700ms.
+A defensive design process was used to ensure no sequence of user interactions could result in an error.
 
-The site was tested on multiple devices to ensure consistent and working deployment of the UX. These include a Linux desktop with Firefox, a Windows 10 laptop with Chrome, a Sony Xperia with Firefox and a Google Nexus table with Chrome. -->
+
 
 ### Issues Fixed
 
+#### In this project the media queries in CSS weren't sufficient for responsive design.
+
+This was overcome by detecting the window width in Javascript with the following function.
+
+```js
+  if (window.matchMedia('screen and (max-width: 991px)').matches) {
+
+    $("#backtocal").css({ "display": "block" })
+
+  }
+```
+
+
 ### Issues to Resolve
 
+#### Handle the 'Back' button on Android devices and browser windows more effectively.
+
+During testing on different devices an issue was found where the back button doesn't work as a user might expect. 
+This was mitigated by adding a prominent 'Back to calendar view' button on mobile and tablet devices.
+
+In future the back button could be handled better through URL hash and browser history methods.
+
+#### Summernote rich text editor only accepts height in pixels.
+
+This makes it a bit more difficult to ensure the Save, Delete and Cancel buttons are visible during editing of a note on very low height windows and screens.
+
+A workaround should be found through encapsulation of the editor or different placement of the button group.
 
 
 
 ## Deployment
 
-DailyNotes is hosted on Github pages. 
+DailyNotes is hosted on Github pages [here](https://evmcodi.github.io/InteractiveFrontendDevelopment-MilestoneProject2/index.html).
 
 It was deployed following the procedure outlined in the [Github Pages documentation](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site).
 
-There was an issue with the relative links of the fonts and the favicon files when the site was uploaded to Github, which resulted in a 404 http error being shown in Firefox Developer Tools for each of these files. 
+There was an issue with the relative links of the favicon files when the site was uploaded to Github, which resulted in a 404 http error being shown in Firefox Developer Tools for each of these files. 
 
 In order to fix this deployment issue a change in the linking was added with the addition of "../../" before the assets folder link.
 
 ### Cloning and editing
 
-This site can be cloned with ```git clone https://github.com/evmcodi/UserCentricDesignMilestoneProject1.git```, or by clicking the 'Download as .zip' button at the top of this repo and the files can be edited directly and viewed in a browser.
+This site can be cloned by clicking the 'Download as .zip' button at the top of this repo and the files can be edited directly and viewed in a browser.
 
 ## Credits
 
-## Devlopment tools used
+### Libraries used
 
-### VSCode
+- JQuery
+- Bootstrap 4
+- Summernote Rich text editor
+
+### Devlopment tools used
+
+#### VSCode
 
 - Free IDE developed by Microsoft.
 
-### Live server extension for VSCode 
+#### Live server extension for VSCode 
 - Auto-reloads the site preview in the browser after a file is edited and saved. 
 - Also allows viewing and testing your site on other devices connected to the same local network.
 - https://github.com/ritwickdey/vscode-live-server
 
-### Beautify css/sass/scss/less
+#### Beautify css/sass/scss/less
 - Extension for VSCode that allows instant formatting of CSS files with Ctrl-Shift-I shortcut.
 
-### Firefox & Developer Tools
+#### Firefox & Developer Tools
 - Browser with developer tools for previewing UI.
 
-### Git & Github
+#### Git & Github
 - Git is used for version control of code is preinstalled on most Linux distributions. 
 - Github.com is used for storing version-controlled code online and as a cloud backup.
 
-### Github Pages
+#### Github Pages
 - Github Pages is used for deployment of the code online.
 
-### quickMockup
+#### quickMockup
 - https://jdittrich.github.io/quickMockup/
 
 - Free open sourece tool for wireframing websites. Allows export to html.
 
 
-
-### Media
- Images from Free-Photos on Pixabay
- https://pixabay.com/photos/
-
-
-Fonts from 
-https://fontlibrary.org/
-
-
-Favicon generator from:
-https://favicon.io/
-
-
-### Acknowledgements
-Responsive top navigation bar with dropdown menu based on code from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
-
-
-Responsive contact form based on edited code from 
-https://www.w3schools.com/howto/howto_css_responsive_form.asp
 
 
 <br><br>
